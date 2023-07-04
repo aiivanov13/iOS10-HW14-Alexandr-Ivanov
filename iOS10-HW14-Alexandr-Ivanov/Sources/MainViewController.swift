@@ -16,6 +16,7 @@ class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupNavigationView()
         setupView()
         setupHeirarchy()
         setupLayout()
@@ -23,7 +24,13 @@ class MainViewController: UIViewController {
 
     // MARK: - Setup
 
+    private func setupNavigationView() {
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.leftBarButtonItem = UIBarButtonItem(systemItem: .add)
+    }
+
     private func setupView() {
+        title = "Albums"
         view.backgroundColor = .white
     }
 
