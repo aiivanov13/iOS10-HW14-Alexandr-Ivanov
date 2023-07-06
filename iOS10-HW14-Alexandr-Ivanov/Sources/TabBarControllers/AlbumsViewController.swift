@@ -1,5 +1,5 @@
 //
-//  MainViewController.swift
+//  AlbumsViewController.swift
 //  iOS10-HW14-Alexandr-Ivanov
 //
 //  Created by Александр Иванов on 03.07.2023.
@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class MainViewController: UIViewController {
+class AlbumsViewController: UIViewController {
 
     private var sectionModels: [SectionModel]?
 
@@ -41,12 +41,11 @@ class MainViewController: UIViewController {
     // MARK: - Setup
 
     private func setupNavigationView() {
-        navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.leftBarButtonItem = UIBarButtonItem(systemItem: .add)
+        
     }
 
     private func setupView() {
-        title = "Albums"
         view.backgroundColor = .white
     }
 
@@ -231,7 +230,7 @@ class MainViewController: UIViewController {
 
 // MARK: - UICollectionView DataSource
 
-extension MainViewController: UICollectionViewDataSource {
+extension AlbumsViewController: UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         sectionModels?.count ?? 0
     }
@@ -276,7 +275,7 @@ extension MainViewController: UICollectionViewDataSource {
 
 // MARK: - UICollectionView Delegate
 
-extension MainViewController: UICollectionViewDelegate {
+extension AlbumsViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
     }
