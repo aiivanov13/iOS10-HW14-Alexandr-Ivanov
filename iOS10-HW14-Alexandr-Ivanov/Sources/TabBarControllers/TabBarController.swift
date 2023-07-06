@@ -11,21 +11,24 @@ final class TabBarController: UITabBarController {
 
     static func createTabBarController() -> UITabBarController {
         let tabBarController = UITabBarController()
+        
         tabBarController.setViewControllers(
             [
                 createChildViewController(controller: LibraryViewController(), title: "Library", image: UIImage(systemName: "photo.fill.on.rectangle.fill"), tag: 0),
-                createChildViewController(controller: ForYouViewController(), title: "For You", image: UIImage(systemName: "heart.text.square"), tag: 1),
+                createChildViewController(controller: ForYouViewController(), title: "For You", image: UIImage(systemName: "heart.text.square.fill"), tag: 1),
                 createChildViewController(controller: AlbumsViewController(), title: "Albums", image: UIImage(systemName: "rectangle.stack.fill"), tag: 2),
                 createChildViewController(controller: SearchViewController(), title: "Search", image: UIImage(systemName: "magnifyingglass"), tag: 3)
             ],
             animated: true
         )
-
+        
         tabBarController.selectedIndex = 2
         tabBarController.tabBar.tintColor = .systemBlue
-        tabBarController.tabBar.backgroundColor =  .white
+        tabBarController.tabBar.backgroundColor = UIColor.init { traitCollection in
+            traitCollection.userInterfaceStyle == .dark ? UIColor.black : UIColor.white
+        }
         tabBarController.tabBar.isTranslucent = true
-
+        
         return tabBarController
     }
 
