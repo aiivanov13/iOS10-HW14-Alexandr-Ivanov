@@ -73,7 +73,10 @@ class ImageCell: UICollectionViewCell {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 15, weight: .regular)
         label.textAlignment = .left
-        label.textColor = .black
+        label.textColor = UIColor.init { traitCollection in
+            traitCollection.userInterfaceStyle == .dark ? UIColor.white : UIColor.black
+        }
+
         return label
     }()
 
