@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct ItemModel {
+struct ItemModel: Equatable {
     var image: UIImage?
     var title: String
     var filesCount: Int
@@ -38,19 +38,19 @@ extension SectionModel {
             ItemModel(image: UIImage(named: "image12"), title: "Vacation", filesCount: 15)
         ]),
         SectionModel(title: "Media types", item: [
-            ItemModel(title: "Videos", filesCount: 210),
-            ItemModel(title: "Selfies", filesCount: 122),
-            ItemModel(title: "Live Photos", filesCount: 100),
-            ItemModel(title: "Time-lapse", filesCount: 4),
-            ItemModel(title: "Bursts", filesCount: 12),
-            ItemModel(title: "Screenshots", filesCount: 42),
-            ItemModel(title: "Screen Recordings", filesCount: 5)
+            ItemModel(image: UIImage(systemName: "video"), title: "Videos", filesCount: 210),
+            ItemModel(image: UIImage(systemName: "person.crop.square"), title: "Selfies", filesCount: 122),
+            ItemModel(image: UIImage(systemName: "livephoto"), title: "Live Photos", filesCount: 100),
+            ItemModel(image: UIImage(systemName: "timelapse"), title: "Time-lapse", filesCount: 4),
+            ItemModel(image: UIImage(systemName: "square.stack.3d.down.right"), title: "Bursts", filesCount: 12),
+            ItemModel(image: UIImage(systemName: "camera.viewfinder"), title: "Screenshots", filesCount: 42),
+            ItemModel(image: UIImage(systemName: "record.circle"), title: "Screen Recordings", filesCount: 5)
         ]),
         SectionModel(title: "Utilities", item: [
-            ItemModel(title: "Imports", filesCount: 185),
-            ItemModel(title: "Duplicates", filesCount: 2),
-            ItemModel(title: "Hidden", filesCount: 0),
-            ItemModel(title: "Recently Deleted", filesCount: 0)
+            ItemModel(image: UIImage(systemName: "square.and.arrow.down"), title: "Imports", filesCount: 185),
+            ItemModel(image: UIImage(systemName: "square.on.square"), title: "Duplicates", filesCount: 2),
+            ItemModel(image: UIImage(systemName: "eye.slash"), title: "Hidden", filesCount: 0),
+            ItemModel(image: UIImage(systemName: "trash"), title: "Recently Deleted", filesCount: 0)
         ])
     ]
 }
