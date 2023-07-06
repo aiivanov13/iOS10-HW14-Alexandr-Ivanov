@@ -9,6 +9,20 @@ import UIKit
 import SnapKit
 
 class ImageCell: UICollectionViewCell {
+    override var isSelected: Bool {
+        didSet {
+            if isSelected {
+                UIView.animate(withDuration: 0.2) {
+                    self.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
+                    self.selectionView.backgroundColor = .systemGray5.withAlphaComponent(0.9)
+                }
+            } else {
+                transform = CGAffineTransform.identity
+                selectionView.backgroundColor = .clear
+            }
+        }
+    }
+
     var itemModel: ItemModel? {
         didSet {
             titleLabel.text = itemModel?.title
@@ -16,9 +30,17 @@ class ImageCell: UICollectionViewCell {
             imageView.image = itemModel?.image
         }
     }
+
     static let identifier = "ImageCell"
 
     // MARK: - Outlets
+
+    private let selectionView: UIView = {
+        let view = UIView()
+        view.layer.cornerRadius = 6
+        view.backgroundColor = .clear
+        return view
+    }()
 
     private let favorite: UIImageView = {
         let image = UIImage(systemName: "heart.fill")
@@ -33,33 +55,32 @@ class ImageCell: UICollectionViewCell {
     private let imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
-        imageView.layer.cornerRadius = 5
-        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.layer.cornerRadius = 6
         imageView.clipsToBounds = true
+        imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
 
     private let stack: UIStackView = {
         let stack = UIStackView()
         stack.axis = .vertical
+        stack.alignment = .leading
         stack.translatesAutoresizingMaskIntoConstraints = false
         return stack
     }()
 
     private let titleLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 14, weight: .regular)
+        label.font = UIFont.systemFont(ofSize: 15, weight: .regular)
         label.textAlignment = .left
-        label.text = "Favorites"
         label.textColor = .black
         return label
     }()
 
     private let countLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 14, weight: .regular)
+        label.font = UIFont.systemFont(ofSize: 15, weight: .regular)
         label.textAlignment = .left
-        label.text = "30"
         label.textColor = .systemGray
         return label
     }()
@@ -68,6 +89,7 @@ class ImageCell: UICollectionViewCell {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
+        setupView()
         setupHierarchy()
         setupLayout()
     }
@@ -78,11 +100,16 @@ class ImageCell: UICollectionViewCell {
 
     // MARK: Setup
 
+    private func setupView() {
+        layer.cornerRadius = 5
+    }
+
     private func setupHierarchy() {
         stack.addArrangedSubview(titleLabel)
         stack.addArrangedSubview(countLabel)
         addSubview(imageView)
         imageView.addSubview(favorite)
+        imageView.addSubview(selectionView)
         addSubview(stack)
     }
 
@@ -92,14 +119,14 @@ class ImageCell: UICollectionViewCell {
             make.height.equalTo(imageView.snp.width)
         }
 
+        selectionView.snp.makeConstraints { $0.leading.trailing.top.bottom.equalTo(imageView) }
+
         stack.snp.makeConstraints { make in
-            make.top.equalTo(imageView.snp.bottom).offset(5)
+            make.top.equalTo(imageView.snp.bottom).offset(6)
             make.leading.trailing.equalTo(self)
         }
 
-        favorite.snp.makeConstraints { make in
-            make.leading.bottom.equalTo(imageView).inset(5)
-        }
+        favorite.snp.makeConstraints { $0.leading.bottom.equalTo(imageView).inset(5) }
     }
 
     func showFavorite() {

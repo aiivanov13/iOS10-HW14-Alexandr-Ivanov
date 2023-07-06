@@ -13,6 +13,7 @@ class CellHeader: UICollectionReusableView {
             titleLabel.text = title
         }
     }
+
     var buttonIsHiden: Bool? {
         didSet {
             button.isHidden = buttonIsHiden ?? true
@@ -42,7 +43,6 @@ class CellHeader: UICollectionReusableView {
         let button = UIButton(type: .system)
         button.setTitle("See All", for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .regular)
-        button.isHidden = false
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -51,7 +51,6 @@ class CellHeader: UICollectionReusableView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        isUserInteractionEnabled = true
         setupHierarchy()
         setupLayout()
     }

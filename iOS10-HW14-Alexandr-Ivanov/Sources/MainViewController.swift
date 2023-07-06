@@ -70,10 +70,12 @@ class MainViewController: UIViewController {
                 )
 
                 let layoutItem = NSCollectionLayoutItem(layoutSize: itemSize)
-                layoutItem.contentInsets = NSDirectionalEdgeInsets(top: 0,
-                                                                   leading: 5,
-                                                                   bottom: 10,
-                                                                   trailing: 0)
+                layoutItem.contentInsets = NSDirectionalEdgeInsets(
+                    top: 0,
+                    leading: 5,
+                    bottom: 10,
+                    trailing: 0
+                )
 
                 let groupSize = NSCollectionLayoutSize(
                     widthDimension: .fractionalWidth(0.47),
@@ -85,25 +87,32 @@ class MainViewController: UIViewController {
                     repeatingSubitem: layoutItem,
                     count: 2
                 )
-                layoutGroup.contentInsets = NSDirectionalEdgeInsets(top: 0,
-                                                                    leading: 5,
-                                                                    bottom: 0,
-                                                                    trailing: 0)
+                layoutGroup.contentInsets = NSDirectionalEdgeInsets(
+                    top: 0,
+                    leading: 5,
+                    bottom: 0,
+                    trailing: 0
+                )
 
                 let layoutSection = NSCollectionLayoutSection(group: layoutGroup)
-                layoutSection.contentInsets = NSDirectionalEdgeInsets(top: 0,
-                                                                      leading: 6,
-                                                                      bottom: 10,
-                                                                      trailing: 15)
+                layoutSection.contentInsets = NSDirectionalEdgeInsets(
+                    top: 0,
+                    leading: 6,
+                    bottom: 10,
+                    trailing: 15
+                )
                 layoutSection.orthogonalScrollingBehavior = .paging
 
-                let layoutSectionHeaderSize = NSCollectionLayoutSize(widthDimension: .absolute(self.view.frame.width - 6),
-                                                                     heightDimension: .estimated(48))
+                let layoutSectionHeaderSize = NSCollectionLayoutSize(
+                    widthDimension: .absolute(self.view.frame.width - 6),
+                    heightDimension: .estimated(48)
+                )
 
                 let layoutSectionHeader = NSCollectionLayoutBoundarySupplementaryItem(
                     layoutSize: layoutSectionHeaderSize,
                     elementKind: UICollectionView.elementKindSectionHeader,
-                    alignment: .topLeading)
+                    alignment: .topLeading
+                )
                 layoutSection.boundarySupplementaryItems = [layoutSectionHeader]
 
                 return layoutSection
@@ -114,10 +123,12 @@ class MainViewController: UIViewController {
                 )
 
                 let layoutItem = NSCollectionLayoutItem(layoutSize: itemSize)
-                layoutItem.contentInsets = NSDirectionalEdgeInsets(top: 0,
-                                                                   leading: 5,
-                                                                   bottom: 10,
-                                                                   trailing: 0)
+                layoutItem.contentInsets = NSDirectionalEdgeInsets(
+                    top: 0,
+                    leading: 5,
+                    bottom: 10,
+                    trailing: 0
+                )
 
                 let groupSize = NSCollectionLayoutSize(
                     widthDimension: .fractionalWidth(0.47),
@@ -129,25 +140,32 @@ class MainViewController: UIViewController {
                     repeatingSubitem: layoutItem,
                     count: 1
                 )
-                layoutGroup.contentInsets = NSDirectionalEdgeInsets(top: 0,
-                                                                    leading: 5,
-                                                                    bottom: 0,
-                                                                    trailing: 0)
+                layoutGroup.contentInsets = NSDirectionalEdgeInsets(
+                    top: 0,
+                    leading: 5,
+                    bottom: 0,
+                    trailing: 0
+                )
 
                 let layoutSection = NSCollectionLayoutSection(group: layoutGroup)
-                layoutSection.contentInsets = NSDirectionalEdgeInsets(top: 0,
-                                                                      leading: 6,
-                                                                      bottom: 10,
-                                                                      trailing: 15)
+                layoutSection.contentInsets = NSDirectionalEdgeInsets(
+                    top: 0,
+                    leading: 6,
+                    bottom: 10,
+                    trailing: 15
+                )
                 layoutSection.orthogonalScrollingBehavior = .paging
                 
-                let layoutSectionHeaderSize = NSCollectionLayoutSize(widthDimension: .absolute(self.view.frame.width - 6),
-                                                                     heightDimension: .estimated(48))
+                let layoutSectionHeaderSize = NSCollectionLayoutSize(
+                    widthDimension: .absolute(self.view.frame.width - 6),
+                    heightDimension: .estimated(48)
+                )
 
                 let layoutSectionHeader = NSCollectionLayoutBoundarySupplementaryItem(
                     layoutSize: layoutSectionHeaderSize,
                     elementKind: UICollectionView.elementKindSectionHeader,
-                    alignment: .topLeading)
+                    alignment: .topLeading
+                )
                 layoutSection.boundarySupplementaryItems = [layoutSectionHeader]
 
                 return layoutSection
@@ -158,10 +176,12 @@ class MainViewController: UIViewController {
                 )
 
                 let layoutItem = NSCollectionLayoutItem(layoutSize: itemSize)
-                layoutItem.contentInsets = NSDirectionalEdgeInsets(top: 0,
-                                                                   leading: 5,
-                                                                   bottom: 0,
-                                                                   trailing: 0)
+                layoutItem.contentInsets = NSDirectionalEdgeInsets(
+                    top: 0,
+                    leading: 0,
+                    bottom: 0,
+                    trailing: 0
+                )
 
                 let groupHeight = itemSize.heightDimension.dimension * CGFloat((self.sectionModels?[section].item.count ?? 0))
 
@@ -177,25 +197,30 @@ class MainViewController: UIViewController {
                 )
                 layoutGroup.contentInsets = NSDirectionalEdgeInsets(
                     top: 0,
-                    leading: 5,
+                    leading: 0,
                     bottom: 0,
                     trailing: 0
                 )
 
                 let layoutSection = NSCollectionLayoutSection(group: layoutGroup)
-                layoutSection.contentInsets = NSDirectionalEdgeInsets(top: 0,
-                                                                      leading: 6,
-                                                                      bottom: 20,
-                                                                      trailing: 15)
+                layoutSection.contentInsets = NSDirectionalEdgeInsets(
+                    top: 0,
+                    leading: 0,
+                    bottom: 20,
+                    trailing: 15
+                )
                 layoutSection.orthogonalScrollingBehavior = .none
 
-                let layoutSectionHeaderSize = NSCollectionLayoutSize(widthDimension: .absolute(self.view.frame.width - 6),
-                                                                     heightDimension: .estimated(48))
+                let layoutSectionHeaderSize = NSCollectionLayoutSize(
+                    widthDimension: .absolute(self.view.frame.width - 6),
+                    heightDimension: .estimated(48)
+                )
 
                 let layoutSectionHeader = NSCollectionLayoutBoundarySupplementaryItem(
                     layoutSize: layoutSectionHeaderSize,
                     elementKind: UICollectionView.elementKindSectionHeader,
-                    alignment: .topLeading)
+                    alignment: .topLeading
+                )
                 layoutSection.boundarySupplementaryItems = [layoutSectionHeader]
 
                 return layoutSection
@@ -252,5 +277,7 @@ extension MainViewController: UICollectionViewDataSource {
 // MARK: - UICollectionView Delegate
 
 extension MainViewController: UICollectionViewDelegate {
-
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        collectionView.deselectItem(at: indexPath, animated: true)
+    }
 }

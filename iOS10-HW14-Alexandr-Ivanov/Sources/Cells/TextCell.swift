@@ -8,6 +8,16 @@
 import UIKit
 
 class TextCell: UICollectionViewCell {
+    override var isSelected: Bool {
+        didSet {
+            if isSelected {
+                backgroundColor = .systemGray5.withAlphaComponent(0.9)
+            } else {
+                backgroundColor = .clear
+            }
+        }
+    }
+
     var itemModel: ItemModel? {
         didSet {
             titleLabel.text = itemModel?.title
@@ -15,6 +25,7 @@ class TextCell: UICollectionViewCell {
             imageView.image = itemModel?.image
         }
     }
+    
     static let identifier = "TextCell"
 
     // MARK: - Outlets
@@ -39,7 +50,6 @@ class TextCell: UICollectionViewCell {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.clipsToBounds = true
         return imageView
     }()
 
@@ -96,7 +106,8 @@ class TextCell: UICollectionViewCell {
 
     private func setupLayout() {
         imageView.snp.makeConstraints { make in
-            make.leading.centerY.equalTo(self)
+            make.centerY.equalTo(self)
+            make.leading.equalTo(self).inset(11)
             make.width.height.equalTo(26)
         }
 
@@ -140,6 +151,7 @@ class TextCell: UICollectionViewCell {
     
     override func prepareForReuse() {
         super.prepareForReuse()
+        separator.isHidden = false
         lock.isHidden = true
         countLabel.isHidden = false
         self.itemModel = nil
