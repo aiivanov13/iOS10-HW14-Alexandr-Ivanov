@@ -25,14 +25,14 @@ class CellHeader: UICollectionReusableView {
 
     private let separator: UIView = {
         let view = UIView()
-        view.backgroundColor = .systemGray3
+        view.backgroundColor = .systemGray4
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
 
     private let titleLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 20, weight: .bold)
+        label.font = UIFont.systemFont(ofSize: 22, weight: .bold)
         label.textAlignment = .left
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -43,6 +43,7 @@ class CellHeader: UICollectionReusableView {
         button.setTitle("See All", for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .regular)
         button.isHidden = false
+        button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
 
@@ -69,7 +70,7 @@ class CellHeader: UICollectionReusableView {
 
     private func setupLayout() {
         separator.snp.makeConstraints { make in
-            make.height.equalTo(1)
+            make.height.equalTo(0.5)
             make.leading.equalTo(self).inset(10)
             make.trailing.top.equalTo(self)
         }
