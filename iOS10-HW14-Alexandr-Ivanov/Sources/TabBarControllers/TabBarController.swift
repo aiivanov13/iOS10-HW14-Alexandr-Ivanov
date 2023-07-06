@@ -23,6 +23,7 @@ final class TabBarController: UITabBarController {
 
         tabBarController.selectedIndex = 2
         tabBarController.tabBar.tintColor = .systemBlue
+        tabBarController.tabBar.backgroundColor =  .white
         tabBarController.tabBar.isTranslucent = true
 
         return tabBarController
