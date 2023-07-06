@@ -20,10 +20,19 @@ class ImageCell: UICollectionViewCell {
 
     // MARK: - Outlets
 
+    private let favorite: UIImageView = {
+        let image = UIImage(systemName: "heart.fill")
+        let imageView = UIImageView(image: image)
+        imageView.tintColor = .white
+        imageView.contentMode = .scaleAspectFit
+        imageView.isHidden = true
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        return imageView
+    }()
+
     private let imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
-        imageView.backgroundColor = .blue
         imageView.layer.cornerRadius = 5
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.clipsToBounds = true
@@ -59,7 +68,6 @@ class ImageCell: UICollectionViewCell {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setupView()
         setupHierarchy()
         setupLayout()
     }
@@ -70,14 +78,11 @@ class ImageCell: UICollectionViewCell {
 
     // MARK: Setup
 
-    private func setupView() {
-
-    }
-
     private func setupHierarchy() {
         stack.addArrangedSubview(titleLabel)
         stack.addArrangedSubview(countLabel)
         addSubview(imageView)
+        imageView.addSubview(favorite)
         addSubview(stack)
     }
 
@@ -91,5 +96,21 @@ class ImageCell: UICollectionViewCell {
             make.top.equalTo(imageView.snp.bottom).offset(5)
             make.leading.trailing.equalTo(self)
         }
+
+        favorite.snp.makeConstraints { make in
+            make.leading.bottom.equalTo(imageView).inset(5)
+        }
+    }
+
+    func showFavorite() {
+        favorite.isHidden = false
+    }
+
+    // MARK: - Reuse
+
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        favorite.isHidden = true
+        self.itemModel = nil
     }
 }
