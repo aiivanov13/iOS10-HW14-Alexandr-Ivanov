@@ -8,19 +8,19 @@
 import UIKit
 
 class CellHeader: UICollectionReusableView {
+    static let identifier = "CellHeader"
+
     var title: String? {
         didSet {
             titleLabel.text = title
         }
     }
 
-    var buttonIsHiden: Bool? {
+    var buttonIsHidden: Bool? {
         didSet {
-            button.isHidden = buttonIsHiden ?? true
+            button.isHidden = buttonIsHidden ?? true
         }
     }
-
-    static let identifier = "CellHeader"
 
     // MARK: - Outlets
 

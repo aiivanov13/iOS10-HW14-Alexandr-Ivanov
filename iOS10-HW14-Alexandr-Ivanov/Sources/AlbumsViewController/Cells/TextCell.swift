@@ -8,6 +8,8 @@
 import UIKit
 
 class TextCell: UICollectionViewCell {
+    static let identifier = "TextCell"
+
     override var isSelected: Bool {
         didSet {
             if isSelected {
@@ -25,8 +27,6 @@ class TextCell: UICollectionViewCell {
             imageView.image = itemModel?.image
         }
     }
-    
-    static let identifier = "TextCell"
 
     // MARK: - Outlets
 
@@ -154,6 +154,6 @@ class TextCell: UICollectionViewCell {
         separator.isHidden = false
         lock.isHidden = true
         countLabel.isHidden = false
-        self.itemModel = nil
+        itemModel = nil
     }
 }

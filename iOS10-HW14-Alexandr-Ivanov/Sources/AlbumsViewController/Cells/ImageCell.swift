@@ -9,6 +9,8 @@ import UIKit
 import SnapKit
 
 class ImageCell: UICollectionViewCell {
+    static let identifier = "ImageCell"
+
     override var isSelected: Bool {
         didSet {
             if isSelected {
@@ -30,8 +32,6 @@ class ImageCell: UICollectionViewCell {
             imageView.image = itemModel?.image
         }
     }
-
-    static let identifier = "ImageCell"
 
     // MARK: - Outlets
 
@@ -141,6 +141,6 @@ class ImageCell: UICollectionViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
         favorite.isHidden = true
-        self.itemModel = nil
+        itemModel = nil
     }
 }
