@@ -21,6 +21,7 @@
 		F6C7C3B42A533EA10058A741 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6C7C3B32A533EA10058A741 /* Assets.xcassets */; };
 		F6C7C3B72A533EA10058A741 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6C7C3B52A533EA10058A741 /* LaunchScreen.storyboard */; };
 		F6C7C3C42A53444F0058A741 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = F6C7C3C32A53444F0058A741 /* SnapKit */; };
+		F6DAB38B2A5B39A900DBE746 /* AlbumsViewControllerCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DAB38A2A5B39A900DBE746 /* AlbumsViewControllerCollectionLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		F6C7C3B32A533EA10058A741 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F6C7C3B62A533EA10058A741 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F6C7C3B82A533EA10058A741 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6DAB38A2A5B39A900DBE746 /* AlbumsViewControllerCollectionLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsViewControllerCollectionLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +168,7 @@
 			children = (
 				F6C7C3C92A53E9C70058A741 /* Cells */,
 				F6C7C3AE2A533EA00058A741 /* AlbumsViewController.swift */,
+				F6DAB38A2A5B39A900DBE746 /* AlbumsViewControllerCollectionLayout.swift */,
 			);
 			path = AlbumsViewController;
 			sourceTree = "<group>";
@@ -255,6 +258,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6C7C3AF2A533EA00058A741 /* AlbumsViewController.swift in Sources */,
+				F6DAB38B2A5B39A900DBE746 /* AlbumsViewControllerCollectionLayout.swift in Sources */,
 				F676CADA2A571AD300FB4A41 /* SearchViewController.swift in Sources */,
 				F676CAD32A5719DB00FB4A41 /* TabBarController.swift in Sources */,
 				F6C7C3AB2A533EA00058A741 /* AppDelegate.swift in Sources */,
@@ -410,6 +414,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -437,6 +442,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
