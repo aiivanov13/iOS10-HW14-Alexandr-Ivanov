@@ -8,8 +8,8 @@
 import UIKit
 
 extension AlbumsViewController {
-    func createLayout(sectionModels: [SectionModel]) -> UICollectionViewCompositionalLayout {
-        return UICollectionViewCompositionalLayout { (section, _) -> NSCollectionLayoutSection in
+    func createLayout() -> UICollectionViewCompositionalLayout {
+        return UICollectionViewCompositionalLayout { [weak self] (section, _) -> NSCollectionLayoutSection in
             switch section {
             case 0:
                 let itemSize = NSCollectionLayoutSize(
@@ -37,7 +37,7 @@ extension AlbumsViewController {
                 layoutSection.orthogonalScrollingBehavior = .paging
 
                 let layoutSectionHeaderSize = NSCollectionLayoutSize(
-                    widthDimension: .absolute(self.view.frame.width - 6),
+                    widthDimension: .absolute((self?.view.frame.width ?? 0) - 6),
                     heightDimension: .estimated(48)
                 )
 
@@ -75,7 +75,7 @@ extension AlbumsViewController {
                 layoutSection.orthogonalScrollingBehavior = .paging
 
                 let layoutSectionHeaderSize = NSCollectionLayoutSize(
-                    widthDimension: .absolute(self.view.frame.width - 6),
+                    widthDimension: .absolute((self?.view.frame.width ?? 0) - 6),
                     heightDimension: .estimated(48)
                 )
 
@@ -96,17 +96,17 @@ extension AlbumsViewController {
                 let layoutItem = NSCollectionLayoutItem(layoutSize: itemSize)
                 layoutItem.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0)
 
-                let groupHeight = itemSize.heightDimension.dimension * CGFloat((sectionModels[section].items.count))
+                let groupHeight = itemSize.heightDimension.dimension * CGFloat(self?.presenter?.pullItemsCount(section: section) ?? 0)
 
                 let groupSize = NSCollectionLayoutSize(
-                    widthDimension: .absolute(self.view.frame.width - 6),
+                    widthDimension: .absolute((self?.view.frame.width ?? 0) - 6),
                     heightDimension: .absolute(groupHeight)
                 )
 
                 let layoutGroup = NSCollectionLayoutGroup.vertical(
                     layoutSize: groupSize,
                     subitem: layoutItem,
-                    count: sectionModels[section].items.count
+                    count: self?.presenter?.pullItemsCount(section: section) ?? 0
                 )
                 layoutGroup.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0)
 
@@ -115,7 +115,7 @@ extension AlbumsViewController {
                 layoutSection.orthogonalScrollingBehavior = .none
 
                 let layoutSectionHeaderSize = NSCollectionLayoutSize(
-                    widthDimension: .absolute(self.view.frame.width - 6),
+                    widthDimension: .absolute((self?.view.frame.width ?? 0) - 6),
                     heightDimension: .estimated(48)
                 )
 

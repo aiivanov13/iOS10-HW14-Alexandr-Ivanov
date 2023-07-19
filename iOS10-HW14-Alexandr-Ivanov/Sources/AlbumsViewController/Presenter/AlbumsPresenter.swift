@@ -1,75 +1,62 @@
 //
-//  AlbumsViewController.swift
+//  AlbumsPresenter.swift
 //  iOS10-HW14-Alexandr-Ivanov
 //
-//  Created by Александр Иванов on 03.07.2023.
+//  Created by Александр Иванов on 18.07.2023.
 //
 
 import UIKit
-import SnapKit
 
-class AlbumsViewController: UIViewController {
+class AlbumsPresenter: NSObject {
+    weak var view: AlbumsViewInput?
+    var interactor: AlbumsInteractorInput?
+    var router: AlbumsRouterInput?
+
     private var sectionModels: [SectionModel]?
-    
-    // MARK: - Outlets
-    
-    private lazy var collectionView: UICollectionView = {
-        let layout = createLayout(sectionModels: sectionModels ?? [])
-        let collection = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collection.register(TextCell.self, forCellWithReuseIdentifier: TextCell.identifier)
-        collection.register(ImageCell.self, forCellWithReuseIdentifier: ImageCell.identifier)
-        collection.register(CellHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: CellHeader.identifier)
-        collection.dataSource = self
-        collection.delegate = self
-        collection.translatesAutoresizingMaskIntoConstraints = false
-        
-        return collection
-    }()
-    
-    // MARK: - Lifecycle
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        sectionModels = SectionModel.sectionModels
-        setupNavigationView()
-        setupView()
-        setupHeirarchy()
-        setupLayout()
+
+    required init(view: AlbumsViewInput) {
+        self.view = view
     }
-    
-    // MARK: - Setup
-    
-    private func setupNavigationView() {
-        navigationItem.leftBarButtonItem = UIBarButtonItem(systemItem: .add)
+
+    private func loadSectionModels() {
+        interactor?.getSectionModel()
     }
-    
-    private func setupView() {
-        view.backgroundColor = .white
+}
+
+// MARK: - AlbumsViewOutput
+
+extension AlbumsPresenter: AlbumsViewOutput {
+    func configureView() {
+        self.loadSectionModels()
     }
-    
-    private func setupHeirarchy() {
-        view.addSubview(collectionView)
+
+    func pullItemsCount(section: Int) -> Int {
+        sectionModels?[section].items.count ?? 0
     }
-    
-    private func setupLayout() {
-        collectionView.snp.makeConstraints { $0.trailing.leading.top.bottom.equalTo(view) }
+}
+
+// MARK: - AlbumsInteractorOutput
+
+extension AlbumsPresenter: AlbumsInteractorOutput {
+    func fetchSectionModel(with data: [SectionModel]) {
+        sectionModels = data
     }
 }
 
 // MARK: - UICollectionView DataSource
 
-extension AlbumsViewController: UICollectionViewDataSource {
+extension AlbumsPresenter: UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         sectionModels?.count ?? 0
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         sectionModels?[section].items.count ?? 0
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let item = sectionModels?[indexPath.section].items[indexPath.row]
-        
+
         switch indexPath.section {
         case 0...1:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ImageCell.identifier, for: indexPath) as? ImageCell else { return UICollectionViewCell() }
@@ -92,7 +79,7 @@ extension AlbumsViewController: UICollectionViewDataSource {
             return UICollectionViewCell()
         }
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: CellHeader.identifier, for: indexPath) as? CellHeader else { return UICollectionReusableView() }
         header.title = sectionModels?[indexPath.section].title
@@ -103,8 +90,9 @@ extension AlbumsViewController: UICollectionViewDataSource {
 
 // MARK: - UICollectionView Delegate
 
-extension AlbumsViewController: UICollectionViewDelegate {
+extension AlbumsPresenter: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
+        router?.pushDetailView(with: sectionModels?[indexPath.section].items[indexPath.row] ?? ItemModel(title: "", filesCount: 0))
     }
 }
