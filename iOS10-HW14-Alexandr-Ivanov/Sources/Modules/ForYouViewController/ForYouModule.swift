@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ForYouModule {
+final class ForYouModule {
     func makeModule() -> UIViewController {
         let viewController = ForYouView()
         let presenter = ForYouPresenter(view: viewController)

@@ -33,12 +33,12 @@ final class TabBarView: UITabBarController {
 
 extension TabBarView: TabBarViewInput {
     func display(_ viewControllers: [UIViewController]) {
-        configureTabBarView()
         let items = createTabBarItems()
 
         for viewController in viewControllers {
             viewController.tabBarItem = items[viewControllers.firstIndex(of: viewController) ?? 0]
         }
         self.viewControllers = viewControllers
+        configureTabBarView()
     }
 }

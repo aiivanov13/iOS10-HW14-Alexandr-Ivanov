@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LibraryModule {
+final class LibraryModule {
     func makeModule() -> UIViewController {
         let viewController = LibraryView()
         let presenter = LibraryPresenter(view: viewController)
