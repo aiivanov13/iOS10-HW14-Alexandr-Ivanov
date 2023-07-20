@@ -7,7 +7,7 @@
 
 import Foundation
 
-class ForYouInteractor {
+final class ForYouInteractor {
     weak var presenter: ForYouInteractorOutput?
 
     required init(presenter: ForYouInteractorOutput) {

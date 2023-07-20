@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class AlbumsView: UIViewController {
+final class AlbumsView: UIViewController {
     var presenter: AlbumsViewOutput?
 
     // MARK: - Outlets
@@ -40,6 +40,8 @@ class AlbumsView: UIViewController {
     private func setupNavigationView() {
         navigationItem.leftBarButtonItem = UIBarButtonItem(systemItem: .add)
         navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationBar.isTranslucent = true
+        title = "Albums"
     }
     
     private func setupView() {

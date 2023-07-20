@@ -7,10 +7,10 @@
 
 import UIKit
 
-class DetailModule {
-    func makeModule() -> UIViewController {
+final class DetailModule {
+    func makeModule(with image: UIImage) -> UIViewController {
         let viewController = DetailView()
-        let presenter = DetailPresenter(view: viewController)
+        let presenter = DetailPresenter(view: viewController, image: image)
         let interactor = DetailInteractor(presenter: presenter)
         let router = DetailRouter(viewController: viewController)
 

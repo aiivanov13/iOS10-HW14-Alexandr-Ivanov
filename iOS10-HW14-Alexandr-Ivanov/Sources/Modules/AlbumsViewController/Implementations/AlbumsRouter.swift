@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AlbumsRouter {
+final class AlbumsRouter {
     weak var viewController: UIViewController?
 
     required init(viewController: UIViewController) {
@@ -18,7 +18,8 @@ class AlbumsRouter {
 // MARK: - AlbumsRouterInput
 
 extension AlbumsRouter: AlbumsRouterInput {
-    func pushDetailView(with item: ItemModel) {
-        viewController?.navigationController?.pushViewController(DetailView(), animated: true)
+    func pushDetailView(with image: UIImage) {
+        let detail = DetailModule().makeModule(with: image)
+        viewController?.navigationController?.pushViewController(detail, animated: true)
     }
 }

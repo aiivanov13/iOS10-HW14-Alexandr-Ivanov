@@ -7,11 +7,26 @@
 
 import UIKit
 
-class SearchView: UIViewController {
+final class SearchView: UIViewController {
     var presenter: SearchViewOutput?
+
+    // MARK: - Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupNavigationView()
+        setupView()
+    }
+
+    // MARK: - Setup
+
+    private func setupNavigationView() {
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationBar.isTranslucent = true
+        title = "Search"
+    }
+
+    private func setupView() {
         view.backgroundColor = .systemCyan
     }
 }

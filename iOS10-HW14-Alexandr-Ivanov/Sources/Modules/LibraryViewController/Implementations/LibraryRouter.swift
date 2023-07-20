@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LibraryRouter {
+final class LibraryRouter {
     weak var viewController: UIViewController?
 
     required init(viewController: UIViewController) {

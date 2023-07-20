@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SearchRouter {
+final class SearchRouter {
     weak var viewController: UIViewController?
 
     required init(viewController: UIViewController) {

@@ -7,7 +7,7 @@
 
 import Foundation
 
-class DetailInteractor {
+final class DetailInteractor {
     weak var presenter: DetailInteractorOutput?
 
     required init(presenter: DetailInteractorOutput) {
@@ -18,4 +18,5 @@ class DetailInteractor {
 // MARK: - DetailInteractorInput
 
 extension DetailInteractor: DetailInteractorInput {
+
 }

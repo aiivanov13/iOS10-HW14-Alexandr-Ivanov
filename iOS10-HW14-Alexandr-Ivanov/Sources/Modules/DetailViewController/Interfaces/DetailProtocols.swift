@@ -9,10 +9,13 @@ import UIKit
 
 // Presenter -> View
 protocol DetailViewInput: AnyObject {
+    func setImage(with image: UIImage)
 }
 
 // View -> Presenter
 protocol DetailViewOutput: AnyObject {
+    func backButtonTapped()
+    func getImage()
 }
 
 // Presenter -> Interactor

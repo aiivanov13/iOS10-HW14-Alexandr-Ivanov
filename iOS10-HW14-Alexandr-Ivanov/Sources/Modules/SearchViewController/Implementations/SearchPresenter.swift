@@ -7,7 +7,7 @@
 
 import Foundation
 
-class SearchPresenter {
+final class SearchPresenter {
     weak var view: SearchViewInput?
     var interactor: SearchInteractorInput?
     var router: SearchRouterInput?

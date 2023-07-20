@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DetailRouter {
+final class DetailRouter {
     weak var viewController: UIViewController?
 
     required init(viewController: UIViewController) {

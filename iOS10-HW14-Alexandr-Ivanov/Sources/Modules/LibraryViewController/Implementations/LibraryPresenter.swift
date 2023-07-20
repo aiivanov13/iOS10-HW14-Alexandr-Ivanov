@@ -7,7 +7,7 @@
 
 import Foundation
 
-class LibraryPresenter {
+final class LibraryPresenter {
     weak var view: LibraryViewInput?
     var interactor: LibraryInteractorInput?
     var router: LibraryRouterInput?

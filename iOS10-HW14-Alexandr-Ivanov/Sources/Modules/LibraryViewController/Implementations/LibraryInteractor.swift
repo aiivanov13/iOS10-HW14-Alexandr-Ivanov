@@ -7,7 +7,7 @@
 
 import Foundation
 
-class LibraryInteractor {
+final class LibraryInteractor {
     weak var presenter: LibraryInteractorOutput?
 
     required init(presenter: LibraryInteractorOutput) {

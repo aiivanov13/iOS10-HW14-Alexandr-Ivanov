@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TabBarRouter {
+final class TabBarRouter {
     weak var viewController: UIViewController?
 
     required init(viewController: UIViewController) {

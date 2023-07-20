@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AlbumsPresenter: NSObject {
+final class AlbumsPresenter: NSObject {
     weak var view: AlbumsViewInput?
     var interactor: AlbumsInteractorInput?
     var router: AlbumsRouterInput?
@@ -94,6 +94,6 @@ extension AlbumsPresenter: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let item = sectionModels?[indexPath.section].items[indexPath.row] else { return }
         collectionView.deselectItem(at: indexPath, animated: true)
-        router?.pushDetailView(with: item)
+        router?.pushDetailView(with: item.image ?? UIImage())
     }
 }

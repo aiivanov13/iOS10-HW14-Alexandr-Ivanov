@@ -7,7 +7,7 @@
 
 import Foundation
 
-class SearchInteractor {
+final class SearchInteractor {
     weak var presenter: SearchInteractorOutput?
 
     required init(presenter: SearchInteractorOutput) {

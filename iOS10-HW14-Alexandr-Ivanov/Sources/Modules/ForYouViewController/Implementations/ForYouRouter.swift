@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ForYouRouter {
+final class ForYouRouter {
     weak var viewController: UIViewController?
 
     required init(viewController: UIViewController) {

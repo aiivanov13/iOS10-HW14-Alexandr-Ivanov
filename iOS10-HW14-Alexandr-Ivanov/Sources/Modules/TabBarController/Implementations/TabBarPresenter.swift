@@ -7,7 +7,7 @@
 
 import Foundation
 
-class TabBarPresenter {
+final class TabBarPresenter {
     weak var view: TabBarViewInput?
     var interactor: TabBarInteractorInput?
     var router: TabBarRouterInput?

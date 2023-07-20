@@ -30,5 +30,5 @@ protocol AlbumsInteractorOutput: AnyObject {
 
 // Presenter -> Router
 protocol AlbumsRouterInput: AnyObject {
-    func pushDetailView(with item: ItemModel)
+    func pushDetailView(with image: UIImage)
 }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-class AlbumsInteractor {
+final class AlbumsInteractor {
     weak var presenter: AlbumsInteractorOutput?
 
     required init(presenter: AlbumsInteractorOutput) {

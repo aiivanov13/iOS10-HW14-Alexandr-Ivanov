@@ -7,7 +7,7 @@
 
 import Foundation
 
-class TabBarInteractor {
+final class TabBarInteractor {
     weak var presenter: TabBarInteractorOutput?
 
     required init(presenter: TabBarInteractorOutput) {

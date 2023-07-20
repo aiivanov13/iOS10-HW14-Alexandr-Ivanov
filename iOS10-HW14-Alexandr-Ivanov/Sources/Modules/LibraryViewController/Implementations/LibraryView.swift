@@ -7,11 +7,26 @@
 
 import UIKit
 
-class LibraryView: UIViewController {
+final class LibraryView: UIViewController {
     var presenter: LibraryViewOutput?
+
+    // MARK: - Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupNavigationView()
+        setupView()
+    }
+
+    // MARK: - Setup
+
+    private func setupNavigationView() {
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationBar.isTranslucent = true
+        title = "Library"
+    }
+
+    private func setupView() {
         view.backgroundColor = .systemBrown
     }
 }

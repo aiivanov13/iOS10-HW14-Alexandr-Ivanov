@@ -7,14 +7,14 @@
 
 import UIKit
 
-class DetailView: UIViewController {
+final class DetailView: UIViewController {
     var presenter: DetailViewOutput?
+
+    // MARK: - Outlets
 
     private lazy var imageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.contentMode = .scaleAspectFill
-        imageView.layer.cornerRadius = 6
-        imageView.backgroundColor = .red
+        imageView.contentMode = .scaleAspectFit
         imageView.clipsToBounds = true
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
@@ -27,11 +27,13 @@ class DetailView: UIViewController {
         button.tintColor = .white
         button.backgroundColor = .systemGray2
         button.layer.cornerRadius = 6
-        //button.addTarget(self, action: #selector(backButtonTapped()), for: <#T##UIControl.Event#>)
+        button.addTarget(self, action: #selector(backButtonTapped), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
 
+    // MARK: - Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationView()
@@ -47,6 +49,7 @@ class DetailView: UIViewController {
     }
 
     private func setupView() {
+        presenter?.getImage()
         view.backgroundColor = .white
     }
 
@@ -59,19 +62,27 @@ class DetailView: UIViewController {
         imageView.snp.makeConstraints { make in
             make.centerY.equalTo(view)
             make.leading.trailing.equalTo(view).inset(90)
-            make.height.equalTo(imageView.snp.width)
+            make.height.equalTo(imageView.snp.width).multipliedBy(2)
         }
 
         backButton.snp.makeConstraints { make in
-            make.top.equalTo(imageView.snp.bottom).offset(20)
+            make.bottom.equalTo(view.snp_bottomMargin).inset(30)
             make.height.equalTo(40)
             make.leading.trailing.equalTo(view).inset(130)
         }
+    }
+
+    // MARK: - Action
+
+    @objc func backButtonTapped() {
+        presenter?.backButtonTapped()
     }
 }
 
 // MARK: - DetailViewInput
 
 extension DetailView: DetailViewInput {
-
+    func setImage(with image: UIImage) {
+        imageView.image = image
+    }
 }

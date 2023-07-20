@@ -7,7 +7,7 @@
 
 import Foundation
 
-class ForYouPresenter {
+final class ForYouPresenter {
     weak var view: ForYouViewInput?
     var interactor: ForYouInteractorInput?
     var router: ForYouRouterInput?
