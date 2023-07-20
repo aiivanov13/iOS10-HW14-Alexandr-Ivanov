@@ -7,8 +7,9 @@
 
 import UIKit
 
-class DetailModule: DetailConfiguratorInput {
-    func configure(with viewController: DetailView) -> UIViewController {
+class DetailModule {
+    func makeModule() -> UIViewController {
+        let viewController = DetailView()
         let presenter = DetailPresenter(view: viewController)
         let interactor = DetailInteractor(presenter: presenter)
         let router = DetailRouter(viewController: viewController)

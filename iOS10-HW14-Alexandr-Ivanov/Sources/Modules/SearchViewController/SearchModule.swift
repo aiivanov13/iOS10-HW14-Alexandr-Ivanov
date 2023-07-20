@@ -7,8 +7,9 @@
 
 import UIKit
 
-class SearchModule: SearchConfiguratorInput {
-    func configure(with viewController: SearchView) -> UIViewController {
+class SearchModule {
+    func makeModule() -> UIViewController {
+        let viewController = SearchView()
         let presenter = SearchPresenter(view: viewController)
         let interactor = SearchInteractor(presenter: presenter)
         let router = SearchRouter(viewController: viewController)

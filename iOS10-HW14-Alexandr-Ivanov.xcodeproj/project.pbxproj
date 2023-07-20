@@ -43,13 +43,12 @@
 		F6E1003F2A69278A007D0BCE /* ForYouModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E1003E2A69278A007D0BCE /* ForYouModule.swift */; };
 		F6E100412A692798007D0BCE /* LibraryModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E100402A692798007D0BCE /* LibraryModule.swift */; };
 		F6E100432A6927A5007D0BCE /* TabBarModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E100422A6927A5007D0BCE /* TabBarModule.swift */; };
-		F6E100452A692F84007D0BCE /* DetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E100442A692F84007D0BCE /* DetailRouter.swift */; };
-		F6E100472A692F98007D0BCE /* SearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E100462A692F98007D0BCE /* SearchRouter.swift */; };
-		F6E100492A692FAB007D0BCE /* AlbumsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E100482A692FAB007D0BCE /* AlbumsRouter.swift */; };
-		F6E1004B2A692FB7007D0BCE /* ForYouRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E1004A2A692FB7007D0BCE /* ForYouRouter.swift */; };
-		F6E1004D2A692FC5007D0BCE /* LibraryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E1004C2A692FC5007D0BCE /* LibraryRouter.swift */; };
-		F6E100502A693000007D0BCE /* TabBarRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E1004F2A693000007D0BCE /* TabBarRouter.swift */; };
-		F6E1FFF22A6710F6007D0BCE /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E1FFF12A6710F6007D0BCE /* Router.swift */; };
+		F6E100532A69751D007D0BCE /* AlbumsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E100522A69751D007D0BCE /* AlbumsRouter.swift */; };
+		F6E100552A697552007D0BCE /* DetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E100542A697552007D0BCE /* DetailRouter.swift */; };
+		F6E100572A697561007D0BCE /* ForYouRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E100562A697561007D0BCE /* ForYouRouter.swift */; };
+		F6E100592A697576007D0BCE /* LibraryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E100582A697576007D0BCE /* LibraryRouter.swift */; };
+		F6E1005B2A697584007D0BCE /* SearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E1005A2A697584007D0BCE /* SearchRouter.swift */; };
+		F6E1005D2A697592007D0BCE /* TabBarRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E1005C2A697592007D0BCE /* TabBarRouter.swift */; };
 		F6E1FFF42A671107007D0BCE /* AlbumsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E1FFF32A671107007D0BCE /* AlbumsPresenter.swift */; };
 		F6E1FFF62A671114007D0BCE /* AlbumsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E1FFF52A671114007D0BCE /* AlbumsInteractor.swift */; };
 		F6E1FFF82A671120007D0BCE /* AlbumsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E1FFF72A671120007D0BCE /* AlbumsProtocols.swift */; };
@@ -94,13 +93,12 @@
 		F6E1003E2A69278A007D0BCE /* ForYouModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForYouModule.swift; sourceTree = "<group>"; };
 		F6E100402A692798007D0BCE /* LibraryModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryModule.swift; sourceTree = "<group>"; };
 		F6E100422A6927A5007D0BCE /* TabBarModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarModule.swift; sourceTree = "<group>"; };
-		F6E100442A692F84007D0BCE /* DetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRouter.swift; sourceTree = "<group>"; };
-		F6E100462A692F98007D0BCE /* SearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRouter.swift; sourceTree = "<group>"; };
-		F6E100482A692FAB007D0BCE /* AlbumsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsRouter.swift; sourceTree = "<group>"; };
-		F6E1004A2A692FB7007D0BCE /* ForYouRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForYouRouter.swift; sourceTree = "<group>"; };
-		F6E1004C2A692FC5007D0BCE /* LibraryRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryRouter.swift; sourceTree = "<group>"; };
-		F6E1004F2A693000007D0BCE /* TabBarRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarRouter.swift; sourceTree = "<group>"; };
-		F6E1FFF12A6710F6007D0BCE /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		F6E100522A69751D007D0BCE /* AlbumsRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumsRouter.swift; sourceTree = "<group>"; };
+		F6E100542A697552007D0BCE /* DetailRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailRouter.swift; sourceTree = "<group>"; };
+		F6E100562A697561007D0BCE /* ForYouRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForYouRouter.swift; sourceTree = "<group>"; };
+		F6E100582A697576007D0BCE /* LibraryRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryRouter.swift; sourceTree = "<group>"; };
+		F6E1005A2A697584007D0BCE /* SearchRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchRouter.swift; sourceTree = "<group>"; };
+		F6E1005C2A697592007D0BCE /* TabBarRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarRouter.swift; sourceTree = "<group>"; };
 		F6E1FFF32A671107007D0BCE /* AlbumsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsPresenter.swift; sourceTree = "<group>"; };
 		F6E1FFF52A671114007D0BCE /* AlbumsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsInteractor.swift; sourceTree = "<group>"; };
 		F6E1FFF72A671120007D0BCE /* AlbumsProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsProtocols.swift; sourceTree = "<group>"; };
@@ -193,7 +191,6 @@
 		F6C7C3C12A53440A0058A741 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				F6E1FFFB2A674AF6007D0BCE /* Router */,
 				F6778EB72A5448B800988C5F /* Model */,
 				F6E100512A69304C007D0BCE /* Modules */,
 			);
@@ -266,7 +263,7 @@
 				F676CAD22A5719DB00FB4A41 /* TabBarView.swift */,
 				F6E100122A690CF1007D0BCE /* TabBarPresenter.swift */,
 				F6E100142A690D01007D0BCE /* TabBarInteractor.swift */,
-				F6E1004F2A693000007D0BCE /* TabBarRouter.swift */,
+				F6E1005C2A697592007D0BCE /* TabBarRouter.swift */,
 			);
 			path = Implementations;
 			sourceTree = "<group>";
@@ -287,7 +284,7 @@
 				F6DAB38A2A5B39A900DBE746 /* AlbumsViewCollectionLayout.swift */,
 				F6E1FFF32A671107007D0BCE /* AlbumsPresenter.swift */,
 				F6E1FFF52A671114007D0BCE /* AlbumsInteractor.swift */,
-				F6E100482A692FAB007D0BCE /* AlbumsRouter.swift */,
+				F6E100522A69751D007D0BCE /* AlbumsRouter.swift */,
 			);
 			path = Implementations;
 			sourceTree = "<group>";
@@ -306,7 +303,7 @@
 				F676CAD92A571AD300FB4A41 /* SearchView.swift */,
 				F6E100302A691D57007D0BCE /* SearchPresenter.swift */,
 				F6E100322A691D63007D0BCE /* SearchInteractor.swift */,
-				F6E100462A692F98007D0BCE /* SearchRouter.swift */,
+				F6E1005A2A697584007D0BCE /* SearchRouter.swift */,
 			);
 			path = Implementations;
 			sourceTree = "<group>";
@@ -325,7 +322,7 @@
 				F676CAD72A571A9100FB4A41 /* ForYouView.swift */,
 				F6E1002A2A691D2B007D0BCE /* ForYouPresenter.swift */,
 				F6E1002C2A691D38007D0BCE /* ForYouInteractor.swift */,
-				F6E1004A2A692FB7007D0BCE /* ForYouRouter.swift */,
+				F6E100562A697561007D0BCE /* ForYouRouter.swift */,
 			);
 			path = Implementations;
 			sourceTree = "<group>";
@@ -344,7 +341,7 @@
 				F676CAD52A571A7B00FB4A41 /* LibraryView.swift */,
 				F6E100262A6918DB007D0BCE /* LibraryPresenter.swift */,
 				F6E100282A691946007D0BCE /* LibraryInteractor.swift */,
-				F6E1004C2A692FC5007D0BCE /* LibraryRouter.swift */,
+				F6E100582A697576007D0BCE /* LibraryRouter.swift */,
 			);
 			path = Implementations;
 			sourceTree = "<group>";
@@ -363,7 +360,7 @@
 				F6E100042A6853D2007D0BCE /* DetailView.swift */,
 				F6E1000A2A688979007D0BCE /* DetailPresenter.swift */,
 				F6E1000C2A688987007D0BCE /* DetailInteractor.swift */,
-				F6E100442A692F84007D0BCE /* DetailRouter.swift */,
+				F6E100542A697552007D0BCE /* DetailRouter.swift */,
 			);
 			path = Implementations;
 			sourceTree = "<group>";
@@ -387,14 +384,6 @@
 				F6DAB3892A5B364F00DBE746 /* SearchViewController */,
 			);
 			path = Modules;
-			sourceTree = "<group>";
-		};
-		F6E1FFFB2A674AF6007D0BCE /* Router */ = {
-			isa = PBXGroup;
-			children = (
-				F6E1FFF12A6710F6007D0BCE /* Router.swift */,
-			);
-			path = Router;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -482,33 +471,32 @@
 				F6DAB38B2A5B39A900DBE746 /* AlbumsViewCollectionLayout.swift in Sources */,
 				F6E1003D2A692777007D0BCE /* AlbumsModule.swift in Sources */,
 				F676CADA2A571AD300FB4A41 /* SearchView.swift in Sources */,
-				F6E100502A693000007D0BCE /* TabBarRouter.swift in Sources */,
-				F6E100472A692F98007D0BCE /* SearchRouter.swift in Sources */,
 				F676CAD32A5719DB00FB4A41 /* TabBarView.swift in Sources */,
-				F6E1FFF22A6710F6007D0BCE /* Router.swift in Sources */,
 				F6C7C3AB2A533EA00058A741 /* AppDelegate.swift in Sources */,
-				F6E1004B2A692FB7007D0BCE /* ForYouRouter.swift in Sources */,
 				F6E100132A690CF1007D0BCE /* TabBarPresenter.swift in Sources */,
 				F6E100152A690D01007D0BCE /* TabBarInteractor.swift in Sources */,
-				F6E1004D2A692FC5007D0BCE /* LibraryRouter.swift in Sources */,
 				F6778EB42A53EA4700988C5F /* TextCell.swift in Sources */,
+				F6E1005B2A697584007D0BCE /* SearchRouter.swift in Sources */,
 				F6E100272A6918DB007D0BCE /* LibraryPresenter.swift in Sources */,
 				F6E100392A692757007D0BCE /* SearchModule.swift in Sources */,
+				F6E100532A69751D007D0BCE /* AlbumsRouter.swift in Sources */,
 				F6E1FFFA2A672351007D0BCE /* Model.swift in Sources */,
 				F6E1002D2A691D38007D0BCE /* ForYouInteractor.swift in Sources */,
 				F6E100412A692798007D0BCE /* LibraryModule.swift in Sources */,
 				F6E1FFF42A671107007D0BCE /* AlbumsPresenter.swift in Sources */,
+				F6E100592A697576007D0BCE /* LibraryRouter.swift in Sources */,
 				F6E100052A6853D2007D0BCE /* DetailView.swift in Sources */,
 				F6E100312A691D57007D0BCE /* SearchPresenter.swift in Sources */,
 				F6E1000F2A6889EF007D0BCE /* DetailProtocols.swift in Sources */,
+				F6E100552A697552007D0BCE /* DetailRouter.swift in Sources */,
 				F6E100252A6918BD007D0BCE /* LibraryProtocols.swift in Sources */,
-				F6E100492A692FAB007D0BCE /* AlbumsRouter.swift in Sources */,
-				F6E100452A692F84007D0BCE /* DetailRouter.swift in Sources */,
 				F6E1000B2A688979007D0BCE /* DetailPresenter.swift in Sources */,
+				F6E1005D2A697592007D0BCE /* TabBarRouter.swift in Sources */,
 				F6E1000D2A688987007D0BCE /* DetailInteractor.swift in Sources */,
 				F6E100292A691946007D0BCE /* LibraryInteractor.swift in Sources */,
 				F6E1FFF82A671120007D0BCE /* AlbumsProtocols.swift in Sources */,
 				F6778EBD2A54B02100988C5F /* CellHeader.swift in Sources */,
+				F6E100572A697561007D0BCE /* ForYouRouter.swift in Sources */,
 				F6E1FFF62A671114007D0BCE /* AlbumsInteractor.swift in Sources */,
 				F6E1003F2A69278A007D0BCE /* ForYouModule.swift in Sources */,
 				F6E100432A6927A5007D0BCE /* TabBarModule.swift in Sources */,

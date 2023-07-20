@@ -7,8 +7,9 @@
 
 import UIKit
 
-class AlbumsModule: AlbumsConfiguratorInput {
-    func configure(with viewController: AlbumsView) -> UIViewController {
+class AlbumsModule {
+    func makeModule() -> UIViewController {
+        let viewController = AlbumsView()
         let presenter = AlbumsPresenter(view: viewController)
         let interactor = AlbumsInteractor(presenter: presenter)
         let router = AlbumsRouter(viewController: viewController)

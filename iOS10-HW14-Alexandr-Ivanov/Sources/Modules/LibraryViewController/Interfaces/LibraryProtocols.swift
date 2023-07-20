@@ -31,8 +31,3 @@ protocol LibraryInteractorOutput: AnyObject {
 protocol LibraryRouterInput: AnyObject {
 
 }
-
-// Configurator
-protocol LibraryConfiguratorInput: AnyObject {
-    func configure(with viewController: LibraryView) -> UIViewController
-}

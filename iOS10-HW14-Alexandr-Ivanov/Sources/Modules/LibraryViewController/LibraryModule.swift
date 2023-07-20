@@ -7,8 +7,9 @@
 
 import UIKit
 
-class LibraryModule: LibraryConfiguratorInput {
-    func configure(with viewController: LibraryView) -> UIViewController {
+class LibraryModule {
+    func makeModule() -> UIViewController {
+        let viewController = LibraryView()
         let presenter = LibraryPresenter(view: viewController)
         let interactor = LibraryInteractor(presenter: presenter)
         let router = LibraryRouter(viewController: viewController)

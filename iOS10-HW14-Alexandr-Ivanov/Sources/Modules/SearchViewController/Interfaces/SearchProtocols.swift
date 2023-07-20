@@ -31,8 +31,3 @@ protocol SearchInteractorOutput: AnyObject {
 protocol SearchRouterInput: AnyObject {
 
 }
-
-// Configurator
-protocol SearchConfiguratorInput: AnyObject {
-    func configure(with viewController: SearchView) -> UIViewController
-}

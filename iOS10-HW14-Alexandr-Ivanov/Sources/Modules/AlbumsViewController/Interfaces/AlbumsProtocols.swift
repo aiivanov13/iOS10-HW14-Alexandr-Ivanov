@@ -32,8 +32,3 @@ protocol AlbumsInteractorOutput: AnyObject {
 protocol AlbumsRouterInput: AnyObject {
     func pushDetailView(with item: ItemModel)
 }
-
-// Configurator
-protocol AlbumsConfiguratorInput: AnyObject {
-    func configure(with viewController: AlbumsView) -> UIViewController
-}

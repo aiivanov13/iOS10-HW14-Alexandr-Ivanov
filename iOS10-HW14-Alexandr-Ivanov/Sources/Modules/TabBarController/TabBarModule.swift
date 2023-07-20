@@ -7,8 +7,9 @@
 
 import UIKit
 
-class TabBarModule: TabBarConfiguratorInput {
-    func configure(with viewController: TabBarView) -> UIViewController {
+class TabBarModule {
+    func makeModule() -> UIViewController {
+        let viewController = TabBarView()
         let presenter = TabBarPresenter(view: viewController)
         let interactor = TabBarInteractor(presenter: presenter)
         let router = TabBarRouter(viewController: viewController)
@@ -16,6 +17,7 @@ class TabBarModule: TabBarConfiguratorInput {
         viewController.presenter = presenter
         presenter.interactor = interactor
         presenter.router = router
+        presenter.setupViewControllers()
         return viewController
     }
 }

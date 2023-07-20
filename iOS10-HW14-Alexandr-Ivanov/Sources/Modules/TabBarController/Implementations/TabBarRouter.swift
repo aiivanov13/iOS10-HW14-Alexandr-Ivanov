@@ -9,7 +9,6 @@ import UIKit
 
 class TabBarRouter {
     weak var viewController: UIViewController?
-    var configurator: TabBarConfiguratorInput?
 
     required init(viewController: UIViewController) {
         self.viewController = viewController
@@ -20,6 +19,11 @@ class TabBarRouter {
 
 extension TabBarRouter: TabBarRouterInput {
     func getViewControllers() -> [UIViewController] {
-        return []
+        [
+            LibraryModule().makeModule(),
+            ForYouModule().makeModule(),
+            AlbumsModule().makeModule(),
+            SearchModule().makeModule()
+        ].map { UINavigationController(rootViewController: $0) }
     }
 }

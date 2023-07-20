@@ -7,8 +7,9 @@
 
 import UIKit
 
-class ForYouModule: ForYouConfiguratorInput {
-    func configure(with viewController: ForYouView) -> UIViewController {
+class ForYouModule {
+    func makeModule() -> UIViewController {
+        let viewController = ForYouView()
         let presenter = ForYouPresenter(view: viewController)
         let interactor = ForYouInteractor(presenter: presenter)
         let router = ForYouRouter(viewController: viewController)

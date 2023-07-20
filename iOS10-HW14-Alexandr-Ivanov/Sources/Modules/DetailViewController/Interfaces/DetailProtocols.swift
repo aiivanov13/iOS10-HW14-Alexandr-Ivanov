@@ -27,8 +27,3 @@ protocol DetailInteractorOutput: AnyObject {
 protocol DetailRouterInput: AnyObject {
     func popDetailView()
 }
-
-// Configurator
-protocol DetailConfiguratorInput: AnyObject {
-    func configure(with viewController: DetailView) -> UIViewController
-}

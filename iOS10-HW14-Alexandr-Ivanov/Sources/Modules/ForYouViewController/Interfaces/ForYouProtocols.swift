@@ -31,8 +31,3 @@ protocol ForYouInteractorOutput: AnyObject {
 protocol ForYouRouterInput: AnyObject {
 
 }
-
-// Configurator
-protocol ForYouConfiguratorInput: AnyObject {
-    func configure(with viewController: ForYouView) -> UIViewController
-}
