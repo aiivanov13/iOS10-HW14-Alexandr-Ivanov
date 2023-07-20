@@ -9,7 +9,6 @@ import UIKit
 
 class DetailView: UIViewController {
     var presenter: DetailViewOutput?
-    private var configurator: DetailConfiguratorInput = Configurator()
 
     override func viewDidLoad() {
         super.viewDidLoad()

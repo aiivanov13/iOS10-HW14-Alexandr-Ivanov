@@ -17,8 +17,8 @@ class SearchRouter {
 
 // MARK: - AlbumsRouterInput
 
-extension SearchRouter: AlbumsRouterInput {
+extension SearchRouter: SearchRouterInput {
     func pushDetailView(with item: ItemModel) {
-        <#code#>
+
     }
 }

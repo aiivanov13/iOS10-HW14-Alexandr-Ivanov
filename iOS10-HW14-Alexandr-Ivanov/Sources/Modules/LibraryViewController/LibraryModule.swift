@@ -11,7 +11,7 @@ class LibraryModule: LibraryConfiguratorInput {
     func configure(with viewController: LibraryView) -> UIViewController {
         let presenter = LibraryPresenter(view: viewController)
         let interactor = LibraryInteractor(presenter: presenter)
-        let router = Router(viewController: viewController)
+        let router = LibraryRouter(viewController: viewController)
 
         viewController.presenter = presenter
         presenter.interactor = interactor

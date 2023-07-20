@@ -34,5 +34,5 @@ protocol TabBarRouterInput: AnyObject {
 
 // Configurator
 protocol TabBarConfiguratorInput: AnyObject {
-
+    func configure(with viewController: TabBarView) -> UIViewController
 }

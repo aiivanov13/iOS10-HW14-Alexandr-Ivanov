@@ -11,7 +11,7 @@ class DetailModule: DetailConfiguratorInput {
     func configure(with viewController: DetailView) -> UIViewController {
         let presenter = DetailPresenter(view: viewController)
         let interactor = DetailInteractor(presenter: presenter)
-        let router = Router(viewController: viewController)
+        let router = DetailRouter(viewController: viewController)
 
         viewController.presenter = presenter
         presenter.interactor = interactor

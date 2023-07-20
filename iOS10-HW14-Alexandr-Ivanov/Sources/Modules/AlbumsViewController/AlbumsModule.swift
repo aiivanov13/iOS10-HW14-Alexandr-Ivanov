@@ -11,7 +11,7 @@ class AlbumsModule: AlbumsConfiguratorInput {
     func configure(with viewController: AlbumsView) -> UIViewController {
         let presenter = AlbumsPresenter(view: viewController)
         let interactor = AlbumsInteractor(presenter: presenter)
-        let router = Router(viewController: viewController)
+        let router = AlbumsRouter(viewController: viewController)
 
         viewController.presenter = presenter
         presenter.interactor = interactor

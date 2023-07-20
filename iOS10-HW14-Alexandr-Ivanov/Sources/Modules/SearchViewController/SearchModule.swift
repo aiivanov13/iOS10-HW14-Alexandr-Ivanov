@@ -11,7 +11,7 @@ class SearchModule: SearchConfiguratorInput {
     func configure(with viewController: SearchView) -> UIViewController {
         let presenter = SearchPresenter(view: viewController)
         let interactor = SearchInteractor(presenter: presenter)
-        let router = Router(viewController: viewController)
+        let router = SearchRouter(viewController: viewController)
 
         viewController.presenter = presenter
         presenter.interactor = interactor

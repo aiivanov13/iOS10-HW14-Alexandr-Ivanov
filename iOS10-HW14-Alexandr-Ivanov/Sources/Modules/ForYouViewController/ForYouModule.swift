@@ -11,7 +11,7 @@ class ForYouModule: ForYouConfiguratorInput {
     func configure(with viewController: ForYouView) -> UIViewController {
         let presenter = ForYouPresenter(view: viewController)
         let interactor = ForYouInteractor(presenter: presenter)
-        let router = Router(viewController: viewController)
+        let router = ForYouRouter(viewController: viewController)
 
         viewController.presenter = presenter
         presenter.interactor = interactor
