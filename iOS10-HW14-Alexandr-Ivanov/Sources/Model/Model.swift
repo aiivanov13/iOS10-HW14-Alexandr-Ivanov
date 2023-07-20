@@ -1,8 +1,8 @@
 //
-//  Models.swift
+//  Entity.swift
 //  iOS10-HW14-Alexandr-Ivanov
 //
-//  Created by Александр Иванов on 04.07.2023.
+//  Created by Александр Иванов on 18.07.2023.
 //
 
 import UIKit
