@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AlbumsModule {
+final class AlbumsModule {
     func makeModule() -> UIViewController {
         let viewController = AlbumsView()
         let presenter = AlbumsPresenter(view: viewController)

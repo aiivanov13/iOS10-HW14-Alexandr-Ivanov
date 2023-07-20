@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TabBarModule {
+final class TabBarModule {
     func makeModule() -> UIViewController {
         let viewController = TabBarView()
         let presenter = TabBarPresenter(view: viewController)

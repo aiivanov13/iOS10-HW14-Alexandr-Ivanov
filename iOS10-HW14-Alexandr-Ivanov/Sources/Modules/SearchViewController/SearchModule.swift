@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SearchModule {
+final class SearchModule {
     func makeModule() -> UIViewController {
         let viewController = SearchView()
         let presenter = SearchPresenter(view: viewController)
