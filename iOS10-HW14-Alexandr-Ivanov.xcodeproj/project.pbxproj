@@ -7,23 +7,104 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F676CAD32A5719DB00FB4A41 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F676CAD22A5719DB00FB4A41 /* TabBarView.swift */; };
+		F676CAD62A571A7B00FB4A41 /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F676CAD52A571A7B00FB4A41 /* LibraryView.swift */; };
+		F676CAD82A571A9100FB4A41 /* ForYouView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F676CAD72A571A9100FB4A41 /* ForYouView.swift */; };
+		F676CADA2A571AD300FB4A41 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F676CAD92A571AD300FB4A41 /* SearchView.swift */; };
+		F6778EB42A53EA4700988C5F /* TextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6778EB32A53EA4700988C5F /* TextCell.swift */; };
+		F6778EB62A53EA5300988C5F /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6778EB52A53EA5300988C5F /* ImageCell.swift */; };
+		F6778EBD2A54B02100988C5F /* CellHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6778EBC2A54B02100988C5F /* CellHeader.swift */; };
+		F698A1632A6BD9100009C69A /* AlbumsDataSource&Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F698A1622A6BD9100009C69A /* AlbumsDataSource&Delegate.swift */; };
 		F6C7C3AB2A533EA00058A741 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C7C3AA2A533EA00058A741 /* AppDelegate.swift */; };
 		F6C7C3AD2A533EA00058A741 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C7C3AC2A533EA00058A741 /* SceneDelegate.swift */; };
-		F6C7C3AF2A533EA00058A741 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C7C3AE2A533EA00058A741 /* ViewController.swift */; };
-		F6C7C3B22A533EA00058A741 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6C7C3B02A533EA00058A741 /* Main.storyboard */; };
+		F6C7C3AF2A533EA00058A741 /* AlbumsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C7C3AE2A533EA00058A741 /* AlbumsView.swift */; };
 		F6C7C3B42A533EA10058A741 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6C7C3B32A533EA10058A741 /* Assets.xcassets */; };
 		F6C7C3B72A533EA10058A741 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6C7C3B52A533EA10058A741 /* LaunchScreen.storyboard */; };
+		F6C7C3C42A53444F0058A741 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = F6C7C3C32A53444F0058A741 /* SnapKit */; };
+		F6DAB38B2A5B39A900DBE746 /* AlbumsViewCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DAB38A2A5B39A900DBE746 /* AlbumsViewCollectionLayout.swift */; };
+		F6E100052A6853D2007D0BCE /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E100042A6853D2007D0BCE /* DetailView.swift */; };
+		F6E1000B2A688979007D0BCE /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E1000A2A688979007D0BCE /* DetailPresenter.swift */; };
+		F6E1000D2A688987007D0BCE /* DetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E1000C2A688987007D0BCE /* DetailInteractor.swift */; };
+		F6E1000F2A6889EF007D0BCE /* DetailProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E1000E2A6889EF007D0BCE /* DetailProtocols.swift */; };
+		F6E100112A690CDC007D0BCE /* TabBarProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E100102A690CDC007D0BCE /* TabBarProtocols.swift */; };
+		F6E100132A690CF1007D0BCE /* TabBarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E100122A690CF1007D0BCE /* TabBarPresenter.swift */; };
+		F6E100152A690D01007D0BCE /* TabBarInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E100142A690D01007D0BCE /* TabBarInteractor.swift */; };
+		F6E100252A6918BD007D0BCE /* LibraryProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E100242A6918BD007D0BCE /* LibraryProtocols.swift */; };
+		F6E100272A6918DB007D0BCE /* LibraryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E100262A6918DB007D0BCE /* LibraryPresenter.swift */; };
+		F6E100292A691946007D0BCE /* LibraryInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E100282A691946007D0BCE /* LibraryInteractor.swift */; };
+		F6E1002B2A691D2B007D0BCE /* ForYouPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E1002A2A691D2B007D0BCE /* ForYouPresenter.swift */; };
+		F6E1002D2A691D38007D0BCE /* ForYouInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E1002C2A691D38007D0BCE /* ForYouInteractor.swift */; };
+		F6E1002F2A691D48007D0BCE /* ForYouProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E1002E2A691D48007D0BCE /* ForYouProtocols.swift */; };
+		F6E100312A691D57007D0BCE /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E100302A691D57007D0BCE /* SearchPresenter.swift */; };
+		F6E100332A691D63007D0BCE /* SearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E100322A691D63007D0BCE /* SearchInteractor.swift */; };
+		F6E100352A691D6F007D0BCE /* SearchProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E100342A691D6F007D0BCE /* SearchProtocols.swift */; };
+		F6E100392A692757007D0BCE /* SearchModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E100382A692757007D0BCE /* SearchModule.swift */; };
+		F6E1003B2A692766007D0BCE /* DetailModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E1003A2A692766007D0BCE /* DetailModule.swift */; };
+		F6E1003D2A692777007D0BCE /* AlbumsModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E1003C2A692777007D0BCE /* AlbumsModule.swift */; };
+		F6E1003F2A69278A007D0BCE /* ForYouModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E1003E2A69278A007D0BCE /* ForYouModule.swift */; };
+		F6E100412A692798007D0BCE /* LibraryModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E100402A692798007D0BCE /* LibraryModule.swift */; };
+		F6E100432A6927A5007D0BCE /* TabBarModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E100422A6927A5007D0BCE /* TabBarModule.swift */; };
+		F6E100532A69751D007D0BCE /* AlbumsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E100522A69751D007D0BCE /* AlbumsRouter.swift */; };
+		F6E100552A697552007D0BCE /* DetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E100542A697552007D0BCE /* DetailRouter.swift */; };
+		F6E100572A697561007D0BCE /* ForYouRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E100562A697561007D0BCE /* ForYouRouter.swift */; };
+		F6E100592A697576007D0BCE /* LibraryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E100582A697576007D0BCE /* LibraryRouter.swift */; };
+		F6E1005B2A697584007D0BCE /* SearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E1005A2A697584007D0BCE /* SearchRouter.swift */; };
+		F6E1005D2A697592007D0BCE /* TabBarRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E1005C2A697592007D0BCE /* TabBarRouter.swift */; };
+		F6E1FFF42A671107007D0BCE /* AlbumsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E1FFF32A671107007D0BCE /* AlbumsPresenter.swift */; };
+		F6E1FFF62A671114007D0BCE /* AlbumsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E1FFF52A671114007D0BCE /* AlbumsInteractor.swift */; };
+		F6E1FFF82A671120007D0BCE /* AlbumsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E1FFF72A671120007D0BCE /* AlbumsProtocols.swift */; };
+		F6E1FFFA2A672351007D0BCE /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E1FFF92A672351007D0BCE /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F676CAD22A5719DB00FB4A41 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		F676CAD52A571A7B00FB4A41 /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
+		F676CAD72A571A9100FB4A41 /* ForYouView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForYouView.swift; sourceTree = "<group>"; };
+		F676CAD92A571AD300FB4A41 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		F6778EB32A53EA4700988C5F /* TextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextCell.swift; sourceTree = "<group>"; };
+		F6778EB52A53EA5300988C5F /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
+		F6778EBC2A54B02100988C5F /* CellHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellHeader.swift; sourceTree = "<group>"; };
+		F698A1622A6BD9100009C69A /* AlbumsDataSource&Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AlbumsDataSource&Delegate.swift"; sourceTree = "<group>"; };
 		F6C7C3A72A533EA00058A741 /* iOS10-HW14-Alexandr-Ivanov.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS10-HW14-Alexandr-Ivanov.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6C7C3AA2A533EA00058A741 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6C7C3AC2A533EA00058A741 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F6C7C3AE2A533EA00058A741 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F6C7C3B12A533EA00058A741 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F6C7C3AE2A533EA00058A741 /* AlbumsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsView.swift; sourceTree = "<group>"; };
 		F6C7C3B32A533EA10058A741 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F6C7C3B62A533EA10058A741 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F6C7C3B82A533EA10058A741 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6DAB38A2A5B39A900DBE746 /* AlbumsViewCollectionLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsViewCollectionLayout.swift; sourceTree = "<group>"; };
+		F6E100042A6853D2007D0BCE /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		F6E1000A2A688979007D0BCE /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
+		F6E1000C2A688987007D0BCE /* DetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractor.swift; sourceTree = "<group>"; };
+		F6E1000E2A6889EF007D0BCE /* DetailProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailProtocols.swift; sourceTree = "<group>"; };
+		F6E100102A690CDC007D0BCE /* TabBarProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarProtocols.swift; sourceTree = "<group>"; };
+		F6E100122A690CF1007D0BCE /* TabBarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarPresenter.swift; sourceTree = "<group>"; };
+		F6E100142A690D01007D0BCE /* TabBarInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarInteractor.swift; sourceTree = "<group>"; };
+		F6E100242A6918BD007D0BCE /* LibraryProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryProtocols.swift; sourceTree = "<group>"; };
+		F6E100262A6918DB007D0BCE /* LibraryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryPresenter.swift; sourceTree = "<group>"; };
+		F6E100282A691946007D0BCE /* LibraryInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryInteractor.swift; sourceTree = "<group>"; };
+		F6E1002A2A691D2B007D0BCE /* ForYouPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForYouPresenter.swift; sourceTree = "<group>"; };
+		F6E1002C2A691D38007D0BCE /* ForYouInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForYouInteractor.swift; sourceTree = "<group>"; };
+		F6E1002E2A691D48007D0BCE /* ForYouProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForYouProtocols.swift; sourceTree = "<group>"; };
+		F6E100302A691D57007D0BCE /* SearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenter.swift; sourceTree = "<group>"; };
+		F6E100322A691D63007D0BCE /* SearchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInteractor.swift; sourceTree = "<group>"; };
+		F6E100342A691D6F007D0BCE /* SearchProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchProtocols.swift; sourceTree = "<group>"; };
+		F6E100382A692757007D0BCE /* SearchModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchModule.swift; sourceTree = "<group>"; };
+		F6E1003A2A692766007D0BCE /* DetailModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailModule.swift; sourceTree = "<group>"; };
+		F6E1003C2A692777007D0BCE /* AlbumsModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsModule.swift; sourceTree = "<group>"; };
+		F6E1003E2A69278A007D0BCE /* ForYouModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForYouModule.swift; sourceTree = "<group>"; };
+		F6E100402A692798007D0BCE /* LibraryModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryModule.swift; sourceTree = "<group>"; };
+		F6E100422A6927A5007D0BCE /* TabBarModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarModule.swift; sourceTree = "<group>"; };
+		F6E100522A69751D007D0BCE /* AlbumsRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumsRouter.swift; sourceTree = "<group>"; };
+		F6E100542A697552007D0BCE /* DetailRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailRouter.swift; sourceTree = "<group>"; };
+		F6E100562A697561007D0BCE /* ForYouRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForYouRouter.swift; sourceTree = "<group>"; };
+		F6E100582A697576007D0BCE /* LibraryRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryRouter.swift; sourceTree = "<group>"; };
+		F6E1005A2A697584007D0BCE /* SearchRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchRouter.swift; sourceTree = "<group>"; };
+		F6E1005C2A697592007D0BCE /* TabBarRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarRouter.swift; sourceTree = "<group>"; };
+		F6E1FFF32A671107007D0BCE /* AlbumsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsPresenter.swift; sourceTree = "<group>"; };
+		F6E1FFF52A671114007D0BCE /* AlbumsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsInteractor.swift; sourceTree = "<group>"; };
+		F6E1FFF72A671120007D0BCE /* AlbumsProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsProtocols.swift; sourceTree = "<group>"; };
+		F6E1FFF92A672351007D0BCE /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,12 +112,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6C7C3C42A53444F0058A741 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F676CADB2A57345900FB4A41 /* TabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				F6E100422A6927A5007D0BCE /* TabBarModule.swift */,
+				F6E1001B2A6917DA007D0BCE /* Interfaces */,
+				F6E1001A2A6917CE007D0BCE /* Implementations */,
+			);
+			path = TabBarController;
+			sourceTree = "<group>";
+		};
+		F6778EB72A5448B800988C5F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F6E1FFF92A672351007D0BCE /* Model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		F6C7C39E2A533EA00058A741 = {
 			isa = PBXGroup;
 			children = (
@@ -56,15 +156,237 @@
 		F6C7C3A92A533EA00058A741 /* iOS10-HW14-Alexandr-Ivanov */ = {
 			isa = PBXGroup;
 			children = (
-				F6C7C3AA2A533EA00058A741 /* AppDelegate.swift */,
-				F6C7C3AC2A533EA00058A741 /* SceneDelegate.swift */,
-				F6C7C3AE2A533EA00058A741 /* ViewController.swift */,
-				F6C7C3B02A533EA00058A741 /* Main.storyboard */,
-				F6C7C3B32A533EA10058A741 /* Assets.xcassets */,
-				F6C7C3B52A533EA10058A741 /* LaunchScreen.storyboard */,
-				F6C7C3B82A533EA10058A741 /* Info.plist */,
+				F6C7C3BE2A5343A30058A741 /* App */,
+				F6C7C3C12A53440A0058A741 /* Sources */,
+				F6C7C3C02A5343FF0058A741 /* UI */,
+				F6C7C3BF2A5343B90058A741 /* Resources */,
 			);
 			path = "iOS10-HW14-Alexandr-Ivanov";
+			sourceTree = "<group>";
+		};
+		F6C7C3BE2A5343A30058A741 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				F6C7C3AA2A533EA00058A741 /* AppDelegate.swift */,
+				F6C7C3AC2A533EA00058A741 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		F6C7C3BF2A5343B90058A741 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F6C7C3B82A533EA10058A741 /* Info.plist */,
+				F6C7C3B32A533EA10058A741 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F6C7C3C02A5343FF0058A741 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				F6C7C3B52A533EA10058A741 /* LaunchScreen.storyboard */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		F6C7C3C12A53440A0058A741 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				F6778EB72A5448B800988C5F /* Model */,
+				F6E100512A69304C007D0BCE /* Modules */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		F6C7C3C92A53E9C70058A741 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F6778EB32A53EA4700988C5F /* TextCell.swift */,
+				F6778EB52A53EA5300988C5F /* ImageCell.swift */,
+				F6778EBC2A54B02100988C5F /* CellHeader.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		F6DAB3862A5B361E00DBE746 /* LibraryViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F6E100402A692798007D0BCE /* LibraryModule.swift */,
+				F6E100232A6918A5007D0BCE /* Interfaces */,
+				F6E100222A69189F007D0BCE /* Implementations */,
+			);
+			path = LibraryViewController;
+			sourceTree = "<group>";
+		};
+		F6DAB3872A5B363200DBE746 /* ForYouViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F6E1003E2A69278A007D0BCE /* ForYouModule.swift */,
+				F6E100212A691896007D0BCE /* Interfaces */,
+				F6E100202A69188F007D0BCE /* Implementations */,
+			);
+			path = ForYouViewController;
+			sourceTree = "<group>";
+		};
+		F6DAB3882A5B364100DBE746 /* AlbumsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F6E1003C2A692777007D0BCE /* AlbumsModule.swift */,
+				F6E1001D2A69180A007D0BCE /* Interfaces */,
+				F6E1001C2A691800007D0BCE /* Implementations */,
+			);
+			path = AlbumsViewController;
+			sourceTree = "<group>";
+		};
+		F6DAB3892A5B364F00DBE746 /* SearchViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F6E100382A692757007D0BCE /* SearchModule.swift */,
+				F6E1001F2A69187F007D0BCE /* Interfaces */,
+				F6E1001E2A691873007D0BCE /* Implementations */,
+			);
+			path = SearchViewController;
+			sourceTree = "<group>";
+		};
+		F6E100032A68534E007D0BCE /* DetailViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F6E1003A2A692766007D0BCE /* DetailModule.swift */,
+				F6E100372A6923CD007D0BCE /* Interfaces */,
+				F6E100362A6923C4007D0BCE /* Implementations */,
+			);
+			path = DetailViewController;
+			sourceTree = "<group>";
+		};
+		F6E1001A2A6917CE007D0BCE /* Implementations */ = {
+			isa = PBXGroup;
+			children = (
+				F676CAD22A5719DB00FB4A41 /* TabBarView.swift */,
+				F6E100122A690CF1007D0BCE /* TabBarPresenter.swift */,
+				F6E100142A690D01007D0BCE /* TabBarInteractor.swift */,
+				F6E1005C2A697592007D0BCE /* TabBarRouter.swift */,
+			);
+			path = Implementations;
+			sourceTree = "<group>";
+		};
+		F6E1001B2A6917DA007D0BCE /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				F6E100102A690CDC007D0BCE /* TabBarProtocols.swift */,
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		F6E1001C2A691800007D0BCE /* Implementations */ = {
+			isa = PBXGroup;
+			children = (
+				F6C7C3C92A53E9C70058A741 /* Cells */,
+				F6C7C3AE2A533EA00058A741 /* AlbumsView.swift */,
+				F6DAB38A2A5B39A900DBE746 /* AlbumsViewCollectionLayout.swift */,
+				F698A1622A6BD9100009C69A /* AlbumsDataSource&Delegate.swift */,
+				F6E1FFF32A671107007D0BCE /* AlbumsPresenter.swift */,
+				F6E1FFF52A671114007D0BCE /* AlbumsInteractor.swift */,
+				F6E100522A69751D007D0BCE /* AlbumsRouter.swift */,
+			);
+			path = Implementations;
+			sourceTree = "<group>";
+		};
+		F6E1001D2A69180A007D0BCE /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				F6E1FFF72A671120007D0BCE /* AlbumsProtocols.swift */,
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		F6E1001E2A691873007D0BCE /* Implementations */ = {
+			isa = PBXGroup;
+			children = (
+				F676CAD92A571AD300FB4A41 /* SearchView.swift */,
+				F6E100302A691D57007D0BCE /* SearchPresenter.swift */,
+				F6E100322A691D63007D0BCE /* SearchInteractor.swift */,
+				F6E1005A2A697584007D0BCE /* SearchRouter.swift */,
+			);
+			path = Implementations;
+			sourceTree = "<group>";
+		};
+		F6E1001F2A69187F007D0BCE /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				F6E100342A691D6F007D0BCE /* SearchProtocols.swift */,
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		F6E100202A69188F007D0BCE /* Implementations */ = {
+			isa = PBXGroup;
+			children = (
+				F676CAD72A571A9100FB4A41 /* ForYouView.swift */,
+				F6E1002A2A691D2B007D0BCE /* ForYouPresenter.swift */,
+				F6E1002C2A691D38007D0BCE /* ForYouInteractor.swift */,
+				F6E100562A697561007D0BCE /* ForYouRouter.swift */,
+			);
+			path = Implementations;
+			sourceTree = "<group>";
+		};
+		F6E100212A691896007D0BCE /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				F6E1002E2A691D48007D0BCE /* ForYouProtocols.swift */,
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		F6E100222A69189F007D0BCE /* Implementations */ = {
+			isa = PBXGroup;
+			children = (
+				F676CAD52A571A7B00FB4A41 /* LibraryView.swift */,
+				F6E100262A6918DB007D0BCE /* LibraryPresenter.swift */,
+				F6E100282A691946007D0BCE /* LibraryInteractor.swift */,
+				F6E100582A697576007D0BCE /* LibraryRouter.swift */,
+			);
+			path = Implementations;
+			sourceTree = "<group>";
+		};
+		F6E100232A6918A5007D0BCE /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				F6E100242A6918BD007D0BCE /* LibraryProtocols.swift */,
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		F6E100362A6923C4007D0BCE /* Implementations */ = {
+			isa = PBXGroup;
+			children = (
+				F6E100042A6853D2007D0BCE /* DetailView.swift */,
+				F6E1000A2A688979007D0BCE /* DetailPresenter.swift */,
+				F6E1000C2A688987007D0BCE /* DetailInteractor.swift */,
+				F6E100542A697552007D0BCE /* DetailRouter.swift */,
+			);
+			path = Implementations;
+			sourceTree = "<group>";
+		};
+		F6E100372A6923CD007D0BCE /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				F6E1000E2A6889EF007D0BCE /* DetailProtocols.swift */,
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		F6E100512A69304C007D0BCE /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				F676CADB2A57345900FB4A41 /* TabBarController */,
+				F6E100032A68534E007D0BCE /* DetailViewController */,
+				F6DAB3862A5B361E00DBE746 /* LibraryViewController */,
+				F6DAB3872A5B363200DBE746 /* ForYouViewController */,
+				F6DAB3882A5B364100DBE746 /* AlbumsViewController */,
+				F6DAB3892A5B364F00DBE746 /* SearchViewController */,
+			);
+			path = Modules;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +405,9 @@
 			dependencies = (
 			);
 			name = "iOS10-HW14-Alexandr-Ivanov";
+			packageProductDependencies = (
+				F6C7C3C32A53444F0058A741 /* SnapKit */,
+			);
 			productName = "iOS10-HW14-Alexandr-Ivanov";
 			productReference = F6C7C3A72A533EA00058A741 /* iOS10-HW14-Alexandr-Ivanov.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +436,9 @@
 				Base,
 			);
 			mainGroup = F6C7C39E2A533EA00058A741;
+			packageReferences = (
+				F6C7C3C22A53444F0058A741 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = F6C7C3A82A533EA00058A741 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,7 +455,6 @@
 			files = (
 				F6C7C3B72A533EA10058A741 /* LaunchScreen.storyboard in Resources */,
 				F6C7C3B42A533EA10058A741 /* Assets.xcassets in Resources */,
-				F6C7C3B22A533EA00058A741 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +465,56 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F6C7C3AF2A533EA00058A741 /* ViewController.swift in Sources */,
+				F6E1002B2A691D2B007D0BCE /* ForYouPresenter.swift in Sources */,
+				F6C7C3AF2A533EA00058A741 /* AlbumsView.swift in Sources */,
+				F6E100332A691D63007D0BCE /* SearchInteractor.swift in Sources */,
+				F6E100352A691D6F007D0BCE /* SearchProtocols.swift in Sources */,
+				F6E100112A690CDC007D0BCE /* TabBarProtocols.swift in Sources */,
+				F6E1002F2A691D48007D0BCE /* ForYouProtocols.swift in Sources */,
+				F6DAB38B2A5B39A900DBE746 /* AlbumsViewCollectionLayout.swift in Sources */,
+				F6E1003D2A692777007D0BCE /* AlbumsModule.swift in Sources */,
+				F676CADA2A571AD300FB4A41 /* SearchView.swift in Sources */,
+				F676CAD32A5719DB00FB4A41 /* TabBarView.swift in Sources */,
 				F6C7C3AB2A533EA00058A741 /* AppDelegate.swift in Sources */,
+				F6E100132A690CF1007D0BCE /* TabBarPresenter.swift in Sources */,
+				F6E100152A690D01007D0BCE /* TabBarInteractor.swift in Sources */,
+				F6778EB42A53EA4700988C5F /* TextCell.swift in Sources */,
+				F6E1005B2A697584007D0BCE /* SearchRouter.swift in Sources */,
+				F6E100272A6918DB007D0BCE /* LibraryPresenter.swift in Sources */,
+				F6E100392A692757007D0BCE /* SearchModule.swift in Sources */,
+				F6E100532A69751D007D0BCE /* AlbumsRouter.swift in Sources */,
+				F6E1FFFA2A672351007D0BCE /* Model.swift in Sources */,
+				F6E1002D2A691D38007D0BCE /* ForYouInteractor.swift in Sources */,
+				F6E100412A692798007D0BCE /* LibraryModule.swift in Sources */,
+				F6E1FFF42A671107007D0BCE /* AlbumsPresenter.swift in Sources */,
+				F6E100592A697576007D0BCE /* LibraryRouter.swift in Sources */,
+				F6E100052A6853D2007D0BCE /* DetailView.swift in Sources */,
+				F6E100312A691D57007D0BCE /* SearchPresenter.swift in Sources */,
+				F6E1000F2A6889EF007D0BCE /* DetailProtocols.swift in Sources */,
+				F698A1632A6BD9100009C69A /* AlbumsDataSource&Delegate.swift in Sources */,
+				F6E100552A697552007D0BCE /* DetailRouter.swift in Sources */,
+				F6E100252A6918BD007D0BCE /* LibraryProtocols.swift in Sources */,
+				F6E1000B2A688979007D0BCE /* DetailPresenter.swift in Sources */,
+				F6E1005D2A697592007D0BCE /* TabBarRouter.swift in Sources */,
+				F6E1000D2A688987007D0BCE /* DetailInteractor.swift in Sources */,
+				F6E100292A691946007D0BCE /* LibraryInteractor.swift in Sources */,
+				F6E1FFF82A671120007D0BCE /* AlbumsProtocols.swift in Sources */,
+				F6778EBD2A54B02100988C5F /* CellHeader.swift in Sources */,
+				F6E100572A697561007D0BCE /* ForYouRouter.swift in Sources */,
+				F6E1FFF62A671114007D0BCE /* AlbumsInteractor.swift in Sources */,
+				F6E1003F2A69278A007D0BCE /* ForYouModule.swift in Sources */,
+				F6E100432A6927A5007D0BCE /* TabBarModule.swift in Sources */,
 				F6C7C3AD2A533EA00058A741 /* SceneDelegate.swift in Sources */,
+				F6E1003B2A692766007D0BCE /* DetailModule.swift in Sources */,
+				F676CAD62A571A7B00FB4A41 /* LibraryView.swift in Sources */,
+				F676CAD82A571A9100FB4A41 /* ForYouView.swift in Sources */,
+				F6778EB62A53EA5300988C5F /* ImageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		F6C7C3B02A533EA00058A741 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F6C7C3B12A533EA00058A741 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F6C7C3B52A533EA10058A741 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -289,12 +649,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = TZVA33YQZA;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "iOS10-HW14-Alexandr-Ivanov/Info.plist";
+				INFOPLIST_FILE = "iOS10-HW14-Alexandr-Ivanov/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -317,12 +677,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = TZVA33YQZA;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "iOS10-HW14-Alexandr-Ivanov/Info.plist";
+				INFOPLIST_FILE = "iOS10-HW14-Alexandr-Ivanov/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -358,6 +718,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F6C7C3C22A53444F0058A741 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F6C7C3C32A53444F0058A741 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F6C7C3C22A53444F0058A741 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F6C7C39F2A533EA00058A741 /* Project object */;
 }
