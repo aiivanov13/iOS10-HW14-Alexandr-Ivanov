@@ -5,26 +5,24 @@
 //  Created by Александр Иванов on 20.07.2023.
 //
 
-import UIKit
+import Foundation
 
 final class DetailPresenter {
     weak var view: DetailViewInput?
     var interactor: DetailInteractorInput?
     var router: DetailRouterInput?
 
-    var image: UIImage?
-
-    required init(view: DetailViewInput, image: UIImage) {
+    required init(view: DetailViewInput) {
         self.view = view
-        self.image = image
     }
 }
 
 // MARK: - DetailViewOutput
 
 extension DetailPresenter: DetailViewOutput {
-    func getImage() {
-        view?.setImage(with: image ?? UIImage())
+    func pullImage() {
+        guard let image = interactor?.getImage() else { return }
+        view?.setImage(with: image)
     }
 
     func backButtonTapped() {

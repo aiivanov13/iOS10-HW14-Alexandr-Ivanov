@@ -49,7 +49,7 @@ final class DetailView: UIViewController {
     }
 
     private func setupView() {
-        presenter?.getImage()
+        presenter?.pullImage()
         view.backgroundColor = .white
     }
 

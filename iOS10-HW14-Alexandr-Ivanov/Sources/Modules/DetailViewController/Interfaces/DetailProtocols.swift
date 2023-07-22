@@ -15,11 +15,12 @@ protocol DetailViewInput: AnyObject {
 // View -> Presenter
 protocol DetailViewOutput: AnyObject {
     func backButtonTapped()
-    func getImage()
+    func pullImage()
 }
 
 // Presenter -> Interactor
 protocol DetailInteractorInput: AnyObject {
+    func getImage() -> UIImage
 }
 
 // Interactor -> Presenter

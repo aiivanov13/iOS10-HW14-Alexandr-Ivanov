@@ -13,12 +13,14 @@ final class AlbumsView: UIViewController {
 
     // MARK: - Outlets
     
-    lazy var collectionView: UICollectionView = {
+    private lazy var collectionView: UICollectionView = {
         let layout = createLayout()
         let collection = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collection.register(TextCell.self, forCellWithReuseIdentifier: TextCell.identifier)
         collection.register(ImageCell.self, forCellWithReuseIdentifier: ImageCell.identifier)
         collection.register(CellHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: CellHeader.identifier)
+        collection.dataSource = self
+        collection.delegate = self
         collection.translatesAutoresizingMaskIntoConstraints = false
         
         return collection

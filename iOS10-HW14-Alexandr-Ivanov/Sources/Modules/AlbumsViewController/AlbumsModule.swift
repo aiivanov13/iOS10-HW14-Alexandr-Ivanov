@@ -17,8 +17,6 @@ final class AlbumsModule {
         viewController.presenter = presenter
         presenter.interactor = interactor
         presenter.router = router
-        viewController.collectionView.dataSource = presenter
-        viewController.collectionView.delegate = presenter
         return viewController
     }
 }
