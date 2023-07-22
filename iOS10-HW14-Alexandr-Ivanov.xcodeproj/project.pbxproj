@@ -14,6 +14,7 @@
 		F6778EB42A53EA4700988C5F /* TextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6778EB32A53EA4700988C5F /* TextCell.swift */; };
 		F6778EB62A53EA5300988C5F /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6778EB52A53EA5300988C5F /* ImageCell.swift */; };
 		F6778EBD2A54B02100988C5F /* CellHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6778EBC2A54B02100988C5F /* CellHeader.swift */; };
+		F698A1632A6BD9100009C69A /* AlbumsDataSource&Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F698A1622A6BD9100009C69A /* AlbumsDataSource&Delegate.swift */; };
 		F6C7C3AB2A533EA00058A741 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C7C3AA2A533EA00058A741 /* AppDelegate.swift */; };
 		F6C7C3AD2A533EA00058A741 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C7C3AC2A533EA00058A741 /* SceneDelegate.swift */; };
 		F6C7C3AF2A533EA00058A741 /* AlbumsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C7C3AE2A533EA00058A741 /* AlbumsView.swift */; };
@@ -63,6 +64,7 @@
 		F6778EB32A53EA4700988C5F /* TextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextCell.swift; sourceTree = "<group>"; };
 		F6778EB52A53EA5300988C5F /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 		F6778EBC2A54B02100988C5F /* CellHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellHeader.swift; sourceTree = "<group>"; };
+		F698A1622A6BD9100009C69A /* AlbumsDataSource&Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AlbumsDataSource&Delegate.swift"; sourceTree = "<group>"; };
 		F6C7C3A72A533EA00058A741 /* iOS10-HW14-Alexandr-Ivanov.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS10-HW14-Alexandr-Ivanov.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6C7C3AA2A533EA00058A741 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6C7C3AC2A533EA00058A741 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -282,6 +284,7 @@
 				F6C7C3C92A53E9C70058A741 /* Cells */,
 				F6C7C3AE2A533EA00058A741 /* AlbumsView.swift */,
 				F6DAB38A2A5B39A900DBE746 /* AlbumsViewCollectionLayout.swift */,
+				F698A1622A6BD9100009C69A /* AlbumsDataSource&Delegate.swift */,
 				F6E1FFF32A671107007D0BCE /* AlbumsPresenter.swift */,
 				F6E1FFF52A671114007D0BCE /* AlbumsInteractor.swift */,
 				F6E100522A69751D007D0BCE /* AlbumsRouter.swift */,
@@ -376,8 +379,8 @@
 		F6E100512A69304C007D0BCE /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				F6E100032A68534E007D0BCE /* DetailViewController */,
 				F676CADB2A57345900FB4A41 /* TabBarController */,
+				F6E100032A68534E007D0BCE /* DetailViewController */,
 				F6DAB3862A5B361E00DBE746 /* LibraryViewController */,
 				F6DAB3872A5B363200DBE746 /* ForYouViewController */,
 				F6DAB3882A5B364100DBE746 /* AlbumsViewController */,
@@ -488,6 +491,7 @@
 				F6E100052A6853D2007D0BCE /* DetailView.swift in Sources */,
 				F6E100312A691D57007D0BCE /* SearchPresenter.swift in Sources */,
 				F6E1000F2A6889EF007D0BCE /* DetailProtocols.swift in Sources */,
+				F698A1632A6BD9100009C69A /* AlbumsDataSource&Delegate.swift in Sources */,
 				F6E100552A697552007D0BCE /* DetailRouter.swift in Sources */,
 				F6E100252A6918BD007D0BCE /* LibraryProtocols.swift in Sources */,
 				F6E1000B2A688979007D0BCE /* DetailPresenter.swift in Sources */,
